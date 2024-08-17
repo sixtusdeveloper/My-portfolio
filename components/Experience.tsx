@@ -24,7 +24,7 @@ const experiences = [
 const Experience = () => {
   return (
     <div className="relative md:pt-10 mx-auto max-w-7xl px-6 lg:px-16 pb-20" id="Experience">
-      <h1 className="text-white font-bold text-center text-[2.7rem] leading-snug tracking-wide">
+      <h1 className="text-white font-bold text-center text-[2.7rem] leading-snug tracking-wider">
         My&nbsp;<span className="text-purple">Experience</span>
       </h1>
       <div className="mt-10 space-y-8">

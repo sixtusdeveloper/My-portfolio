@@ -32,32 +32,32 @@ const Projects = () => {
 
   return (
     <div className="relative md:pt-10 mx-auto max-w-7xl px-6 lg:px-10 pb-20" id="Projects">
-      <h1 className="text-white font-bold text-center text-[2.7rem] leading-snug tracking-wide">
+      <h1 className="text-white font-bold text-center text-[2.7rem] leading-snug tracking-wider">
         My&nbsp;<span className="text-purple">Recent Projects</span>
       </h1>
       <div className="flex relative flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {currentProjects.map(({ id, title, des, img, iconLists, link }) => (
           <div
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[520px] w-[80vw]"
+            className="sm:h-[41rem] h-[32rem] lg:min-h-[29.5rem] flex items-center justify-center sm:w-[480px] w-[90vw]"
             key={id}
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[520px] w-[80vw] overflow-hidden sm:h-[62vh] h-[45vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-[480px] w-[90vw] overflow-hidden sm:h-[50vh] h-[45vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden rounded-3xl lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
                   <img src="/bg.png" alt="bg-img" />
                 </div>
-                <img src={img} alt={title} className="z-10 absolute bottom-0" />
+                <img src={img} alt={title} className="z-10 px-6 absolute bottom-0" />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h1 className="font-bold lg:text-xl md:text-md text-base line-clamp-1">
                 {title}
               </h1>
 
               <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                className="lg:text-md lg:font-normal font-light text-sm line-clamp-2"
                 style={{
                   color: "#BEC1DD",
                   margin: "1vh 0",
@@ -82,7 +82,7 @@ const Projects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                  <p className="flex lg:text-lg md:text-xs text-sm text-purple">
                     Check Live Site
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
@@ -94,7 +94,7 @@ const Projects = () => {
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-10">
         <button
           onClick={handlePreviousPage}
           disabled={currentPage === 1}

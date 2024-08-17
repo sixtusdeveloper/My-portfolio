@@ -15,7 +15,7 @@ const BackDropButton = ({
       onClick={handleClick}
     >
       <span 
-        className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-4 text-[0.98rem] font-medium hover:text-white text-purple backdrop-blur-3xl gap-2 whitespace-nowrap ${otherClasses}`}
+        className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-4 text-[0.89rem] font-medium hover:text-white text-purple backdrop-blur-3xl gap-2 whitespace-nowrap ${otherClasses}`}
       >
         {position === 'left' && icon}
         {title}

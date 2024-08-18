@@ -5,7 +5,7 @@ export const navigation = [
   { name: 'Experience', href: '#Experience' },
     { name: 'Projects', href: '#Projects' },
     { name: 'Approach', href: '#Approach' },
-    { name: 'Testimonials', href: '#Testimonials' },
+    { name: 'Clients', href: '#Clients' },
 ];
 
 export const gridItems = [
@@ -291,6 +291,39 @@ export const testimonials = [
       imageUrl: "/profile02.jpeg",
       fallbackImageUrl: "/profile02.jpeg",
       rating: 4,
+    },
+  ];
+  
+  export const companies = [
+    {
+      id: 1,
+      name: "cloudinary",
+      img: "/client01.png",
+      nameImg: "/cloudinaryName.svg",
+    },
+    {
+      id: 2,
+      name: "appwrite",
+      img: "/client02.png",
+      nameImg: "/appwriteName.svg",
+    },
+    {
+      id: 3,
+      name: "HOSTINGER",
+      img: "/client03.png",
+      nameImg: "/hostingerName.svg",
+    },
+    {
+      id: 4,
+      name: "stream",
+      img: "/client04.png",
+      nameImg: "/streamName.svg",
+    },
+    {
+      id: 5,
+      name: "docker.",
+      img: "/client05.png",
+      nameImg: "/dockerName.svg",
     },
   ];
   

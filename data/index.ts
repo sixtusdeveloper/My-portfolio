@@ -13,10 +13,10 @@ export const gridItems = [
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[82vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    className: "relative lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[80vh] overflow-hidden",
+    imgClassName: "w-full h-full object-cover",
+    titleClassName: "absolute bottom-0 left-0 right-0 p-4 text-white justify-end z-10",
+    img: "/profile.jpg",
     spareImg: "",
   },
   {
@@ -71,6 +71,8 @@ export const gridItems = [
     spareImg: "",
   },
 ];
+
+
 
 //========================== Work Experience Section Data ==========================//
 export const services  = [
@@ -291,39 +293,6 @@ export const testimonials = [
       imageUrl: "/profile02.jpeg",
       fallbackImageUrl: "/profile02.jpeg",
       rating: 4,
-    },
-  ];
-  
-  export const companies = [
-    {
-      id: 1,
-      name: "cloudinary",
-      img: "/client01.png",
-      nameImg: "/cloudinaryName.svg",
-    },
-    {
-      id: 2,
-      name: "appwrite",
-      img: "/client02.png",
-      nameImg: "/appwriteName.svg",
-    },
-    {
-      id: 3,
-      name: "HOSTINGER",
-      img: "/client03.png",
-      nameImg: "/hostingerName.svg",
-    },
-    {
-      id: 4,
-      name: "stream",
-      img: "/client04.png",
-      nameImg: "/streamName.svg",
-    },
-    {
-      id: 5,
-      name: "docker.",
-      img: "/client05.png",
-      nameImg: "/dockerName.svg",
     },
   ];
   

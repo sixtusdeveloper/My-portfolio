@@ -13,6 +13,9 @@ import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
 import Clients from "@/components/Clients";
 import ClientCompanies from "@/components/ClientsCompanies";
+import ReachOut from '@/components/ReachOut';
+import { CompareDemo } from "@/components/CompareDemo";
+// import GridLayout from "@/components/GridLayout";
 
 export default function Home() {
 
@@ -23,6 +26,7 @@ export default function Home() {
           <div className="max-w-7xl w-screen">
             <NavBar navigation={navigation} />
             <Hero />
+            <CompareDemo />
             <Grid />
             <Services />
             <Experience />
@@ -30,6 +34,7 @@ export default function Home() {
             <Approach /> 
             <Clients />
             <ClientCompanies />
+            <ReachOut />
             <Footer />
           </div>
         </main>

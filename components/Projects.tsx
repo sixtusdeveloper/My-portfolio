@@ -38,11 +38,11 @@ const Projects = () => {
       <div className="flex relative flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {currentProjects.map(({ id, title, des, img, iconLists, link }) => (
           <div
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[29.5rem] flex items-center justify-center sm:w-[480px] w-[90vw]"
+            className="sm:h-[41rem] h-[28rem] lg:min-h-[29.5rem] flex items-center justify-center sm:w-[480px] w-[90vw]"
             key={id}
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[480px] w-[90vw] overflow-hidden sm:h-[50vh] h-[45vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-[480px] w-[90vw] overflow-hidden sm:h-[50vh] h-[30vh] mb-4 lg:mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden rounded-3xl lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
@@ -102,7 +102,7 @@ const Projects = () => {
         >
           Previous
         </button>
-        <span className="text-white font-bold mx-2">
+        <span className="text-gray-200 flex items-center text-sm font-bold mx-2">
           Page {currentPage} of {totalPages}
         </span>
         <button

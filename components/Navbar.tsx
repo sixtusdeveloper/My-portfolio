@@ -75,7 +75,7 @@ export default function Navbar({
                 priority={true}
                 style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
               />
-              <span className="text-gray-100 tracking-wide font-semibold text-lg">Sixtusdev</span>
+              <span className="text-gray-100 tracking-wide font-semibold text-sm">Sixtusdev</span>
             </div>
           </a>
         </div>
@@ -131,7 +131,7 @@ export default function Navbar({
                 style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
                 priority={true}
               />
-               <span className="text-gray-100 tracking-wide font-semibold text-lg">Sixtusdev</span>
+               <span className="text-gray-100 tracking-wide font-semibold text-sm">Sixtusdev</span>
             </a>
             
             <button

@@ -3,19 +3,19 @@ import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
-// import { div } from "three/examples/jsm/nodes/Nodes.js";
 
-const Approach = () =>  {
+const Approach = () => {
   return (
     <section className="w-full py-20" id="Approach">
-        <h1 className="heading text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">My 
-            <span className="text-purple">&nbsp;Approach</span>
-        </h1>
+      <h1 className="heading text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">
+        My
+        <span className="text-purple">&nbsp;Approach</span>
+      </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4 w-full mx-auto px-8">
-        <Card 
-        title="Planning & Strategy" 
-        icon={<AceternityIcon order="Phase 1"/>}
-        description="We'll collaborate to map out your website goals, target audience, and key functionalities. 
+        <Card
+          title="Planning & Strategy"
+          icon={<AceternityIcon order="Phase 1" />}
+          description="We'll collaborate to map out your website goals, target audience, and key functionalities. 
         We'll discuss thing like site structure, navigation and content requirements"
         >
           <CanvasRevealEffect
@@ -23,13 +23,12 @@ const Approach = () =>  {
             containerClassName="bg-emerald-900"
           />
         </Card>
-        <Card 
-        title="Development & Progress Updates" 
-        icon={<AceternityIcon order="Phase 2"/>}
-        description="Once we agree on the plan, I cue my lofy playlist and dive into coding. From initial 
+        <Card
+          title="Development & Progress Updates"
+          icon={<AceternityIcon order="Phase 2" />}
+          description="Once we agree on the plan, I cue my lofy playlist and dive into coding. From initial 
         sketches to pulished code, I will keep you updated every step of the way."
         >
-        
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-black"
@@ -42,10 +41,10 @@ const Approach = () =>  {
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
         </Card>
-        <Card 
-        title="Development & Launch" 
-        icon={<AceternityIcon order="Phase 3"/>}
-        description="This's where the magic happens! Based on the approved designs, I'll translate everything into functional code, building your website from the ground up."
+        <Card
+          title="Development & Launch"
+          icon={<AceternityIcon order="Phase 3" />}
+          description="This's where the magic happens! Based on the approved designs, I'll translate everything into functional code, building your website from the ground up."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -56,7 +55,7 @@ const Approach = () =>  {
       </div>
     </section>
   );
-}
+};
 
 const Card = ({
   title,
@@ -100,7 +99,10 @@ const Card = ({
         <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
           {title}
         </h2>
-        <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{ color: '#E4ECFF'}}>
+        <h2
+          className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
+          style={{ color: "#E4ECFF" }}
+        >
           {description}
         </h2>
       </div>
@@ -108,15 +110,15 @@ const Card = ({
   );
 };
 
-const AceternityIcon = ({ order }: {order: string}) => {
+const AceternityIcon = ({ order }: { order: string }) => {
   return (
     <div>
-        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-3 font-bold text-white backdrop-blur-3xl text-2xl">
-                { order }
-            </span>
-        </button>
+      <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-3 font-bold text-white backdrop-blur-3xl text-2xl">
+          {order}
+        </span>
+      </button>
     </div>
   );
 };
@@ -136,6 +138,5 @@ export const Icon = ({ className, ...rest }: any) => {
     </svg>
   );
 };
-
 
 export default Approach;

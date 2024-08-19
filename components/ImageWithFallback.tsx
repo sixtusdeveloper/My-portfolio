@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useState } from 'react';
-import Image from 'next/image';
+import React from "react";
+import { useState } from "react";
+import Image from "next/image";
 
 interface ImageWithFallbackProps {
   src: string;
@@ -13,7 +13,14 @@ interface ImageWithFallbackProps {
   height: number;
 }
 
-const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, fallbackSrc, className, width, height }) => {
+const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
+  src,
+  alt,
+  fallbackSrc,
+  className,
+  width,
+  height,
+}) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
@@ -25,7 +32,7 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ src, alt, fallbac
       onError={() => setImgSrc(fallbackSrc)}
       width={width}
       height={height}
-      style={{ width: 'auto', height: 'auto' }}
+      style={{ width: "auto", height: "auto" }}
     />
   );
 };

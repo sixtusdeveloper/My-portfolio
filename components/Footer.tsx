@@ -1,5 +1,11 @@
-import React from 'react';
-import { FaGithub, FaTwitter, FaLinkedin, FaFacebook, FaYoutube } from 'react-icons/fa';
+import React from "react";
+import {
+  FaGithub,
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -11,30 +17,30 @@ const Footer: React.FC = () => {
           rel="noopener noreferrer"
           className="text-purple hover:text-blue-200"
         >
-          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
+          <span className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
             <FaGithub size={18} />
-          </div>
+          </span>
         </a>
         <a
-          href="https://twitter.com/yourusername"
+          href="https://x.com/develites01"
           target="_blank"
           rel="noopener noreferrer"
           className="text-purple hover:text-blue-200"
         >
-          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
+          <span className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
             <FaTwitter size={18} />
-          </div>
+          </span>
         </a>
-        
+
         <a
-          href="https://www.youtube.com/yourusername"
+          href="https://www.youtube.com/@Sixtusdev"
           target="_blank"
           rel="noopener noreferrer"
           className="text-purple hover:text-blue-200"
         >
-          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
+          <span className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
             <FaYoutube size={18} />
-          </div>
+          </span>
         </a>
         <a
           href="https://linkedin.com/in/sixtusushrey"
@@ -42,25 +48,26 @@ const Footer: React.FC = () => {
           rel="noopener noreferrer"
           className="text-purple hover:text-blue-200"
         >
-          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
-            <FaLinkedin size={18}  />
-          </div>
+          <span className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
+            <FaLinkedin size={18} />
+          </span>
         </a>
         <a
-          href="https://facebook.com/yourusername"
+          href="https://web.facebook.com/develitesacademy"
           target="_blank"
           rel="noopener noreferrer"
           className="text-purple hover:text-blue-200"
         >
-          <div className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
+          <span className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full">
             <FaFacebook size={18} />
-          </div>
+          </span>
         </a>
       </div>
 
       <div className="flex justify-center items-center py-4 mt-2 md:mt-6">
         <span className="w-full flex flex-col text-center text-white-100 text-sm p-2 tracking-wider">
-          Copyright&copy; 2024. developed by Sixtusdev | all rights reserved | terms & conditions.
+          Copyright&copy; 2024. developed by Sixtusdev | all rights reserved |
+          terms & conditions.
         </span>
       </div>
     </footer>

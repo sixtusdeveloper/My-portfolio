@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import BackDropButton from "./ui/BackDropButton";
 import MagicButton from "./ui/MagicButton";

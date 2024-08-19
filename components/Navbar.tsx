@@ -64,8 +64,8 @@ export default function Navbar({
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${scrolling ? 'bg-black-100' : 'bg-transparent'}`}>
       <nav aria-label="Global" className="flex items-center justify-between p-4 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
-            <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1">
+            <a href="/" className="-m-1.5 p-1.5">
               <Image
                 src="/Logo-icon.png"
                 alt="Sixtusdev Logo"
@@ -75,9 +75,9 @@ export default function Navbar({
                 priority={true}
                 style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
               />
-              <span className="text-gray-100 tracking-wide font-semibold text-sm">Sixtusdev</span>
-            </div>
-          </a>
+              <span className="text-gray-100 tracking-wider font-medium text-sm">Sixtusdev</span>
+            </a>
+          </div>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -94,7 +94,7 @@ export default function Navbar({
             <a
               key={item.name}
               href={`#${item.href.substring(1)}`}
-              className={`text-sm font-semibold leading-6 tracking-wide ${activeSection === item.href.substring(1) ? 'text-blue-300' : 'text-blue-100'} hover:text-blue-200`}
+              className={`text-sm font-medium leading-6 tracking-wider ${activeSection === item.href.substring(1) ? 'text-blue-300' : 'text-blue-100'} hover:text-blue-200`}
               onClick={() => handleClick(item.href)}
             >
               {item.name}
@@ -120,8 +120,7 @@ export default function Navbar({
         <div className="fixed inset-0 z-40" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-             
+            <a href="/" className="-m-1.5 p-1.5">
               <Image
                 alt="Chatter"
                 src={LogoImgDark || "/Logo-icon.png"}
@@ -131,7 +130,7 @@ export default function Navbar({
                 style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
                 priority={true}
               />
-               <span className="text-gray-100 tracking-wide font-semibold text-sm">Sixtusdev</span>
+               <span className="text-gray-100 tracking-wider font-medium text-sm">Sixtusdev</span>
             </a>
             
             <button
@@ -150,7 +149,7 @@ export default function Navbar({
                   <a
                     key={item.name}
                     href={`#${item.href.substring(1)}`}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black-100 hover:bg-gray-200"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium tracking-wider leading-7 text-black-100 hover:bg-gray-200"
                     onClick={() => handleClick(item.href)}
                   >
                     {item.name}

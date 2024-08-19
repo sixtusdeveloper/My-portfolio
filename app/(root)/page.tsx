@@ -1,4 +1,4 @@
-"use client"; // Ensure the component is a client-side component
+// "use client"; // Ensure the component is a client-side component
 
 import React from "react";
 import NavBar from "@/components/Navbar";

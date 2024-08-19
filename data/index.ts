@@ -1,7 +1,4 @@
 import React from "react";
-import { LuGraduationCap } from "react-icons/lu";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 
 
 //============================= Home Page Navigation links ============================//
@@ -330,5 +327,29 @@ export const experiences = [
     location: "Freelance",
     type: "Remote",
     description: "Assisted in developing software solutions...",
+  },
+];
+
+export const education = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    institution: "University A",
+    date: "2012 - 2016",
+    type: "Full-time",
+    description: "Studied various computer science topics including...",
+  },
+  {
+    degree: "Master of Science in Software Engineering",
+    institution: "University B",
+    date: "2016 - 2018",
+    type: "Full-time",
+    description: "Specialized in software development methodologies...",
+  },
+  {
+    degree: "Master of Science in Software Engineering",
+    institution: "University B",
+    date: "2016 - 2018",
+    type: "Full-time",
+    description: "Specialized in software development methodologies...",
   },
 ];

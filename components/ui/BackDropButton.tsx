@@ -1,15 +1,15 @@
-import React from "react";
+'use client';
 
 const BackDropButton = ({
   title,
   icon,
-  position,
+  position = "right", // Default to 'right'
   handleClick,
-  otherClasses,
+  otherClasses = "", // Default to an empty string
 }: {
   title: string;
   icon?: React.ReactNode;
-  position?: string;
+  position?: "left" | "right";
   handleClick?: () => void;
   otherClasses?: string;
 }) => {

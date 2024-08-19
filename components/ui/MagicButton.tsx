@@ -1,4 +1,4 @@
-// Newly Added
+'use client';
 
 import React from "react";
 

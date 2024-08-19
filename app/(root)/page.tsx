@@ -5,17 +5,17 @@ import NavBar from "@/components/Navbar";
 import { navigation } from '@/data';
 import Hero from "@/components/Hero";
 import Services from '@/components/Services';
-import Footer from "@/components/Footer";
 import { SignedIn, SignedOut, RedirectToSignIn, useUser } from "@clerk/nextjs";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
-import Grid from "@/components/Grid";
+import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Clients from "@/components/Clients";
 import ClientCompanies from "@/components/ClientsCompanies";
 import ReachOut from '@/components/ReachOut';
-import { CompareDemo } from "@/components/CompareDemo";
-// import GridLayout from "@/components/GridLayout";
+import Footer from "@/components/Footer";
+import ScrollIndicator from '@/components/ScrollIndicator';
+
 
 export default function Home() {
 
@@ -26,8 +26,7 @@ export default function Home() {
           <div className="max-w-7xl w-screen">
             <NavBar navigation={navigation} />
             <Hero />
-            <CompareDemo />
-            <Grid />
+            <About />
             <Services />
             <Experience />
             <Projects />
@@ -36,6 +35,7 @@ export default function Home() {
             <ClientCompanies />
             <ReachOut />
             <Footer />
+            <ScrollIndicator />
           </div>
         </main>
       </SignedIn>

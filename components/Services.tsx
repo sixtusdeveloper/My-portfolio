@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Features = () => {
   return (
       <div className="relative md:pt-10 mx-auto max-w-7xl px-6 lg:px-16 pb-20" id="Services">
-        <h1 className="text-white font-bold text-center text-[2.7rem] leading-snug tracking-wide">My&nbsp;<span className="text-purple">Services</span></h1>
+        <h1 className="text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">My&nbsp;<span className="text-purple">Services</span></h1>
 
          <div className='w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10'>
             {services.map((card) => (

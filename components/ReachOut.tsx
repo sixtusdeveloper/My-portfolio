@@ -5,7 +5,7 @@ import Image from "next/image";
 const ReachOut = () => {
   return (
     <div className="relative lg:pt-10 mx-auto max-w-4xl px-6 lg:px-16 pb-20" id="ReachOut">
-      <h1 className="heading text-white p-8 lg:p-8 font-bold text-center text-[2.7rem] leading-snug tracking-wide">
+      <h1 className="heading text-white p-8 lg:p-8 font-bold text-center text-[2.4rem] leading-snug tracking-wider">
         Ready to take your <span className="text-purple">digital presence</span> to the next level?
       </h1>
       <p className='text-white-100 lg:mt-6 my-5 text-center text-md'>

@@ -1,3 +1,9 @@
+import React from "react";
+import { LuGraduationCap } from "react-icons/lu";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+
+
 //============================= Home Page Navigation links ============================//
 export const navigation = [
   { name: 'About', href: '#About' },
@@ -71,8 +77,6 @@ export const gridItems = [
     spareImg: "",
   },
 ];
-
-
 
 //========================== Work Experience Section Data ==========================//
 export const services  = [
@@ -295,4 +299,36 @@ export const testimonials = [
       rating: 4,
     },
   ];
-  
+
+// data/experienceData.js
+
+export const experiences = [
+  {
+    date: "March 2023 - Present",
+    title: "Software Engineer",
+    location: "Upwork",
+    type: "Remote",
+    description: "Working on web applications...",
+  },
+  {
+    date: "June 2024 - Present",
+    title: "Software Engineer",
+    location: "SkilledUp Life",
+    type: "Remote",
+    description: "Worked on mobile apps...",
+  },
+  {
+    date: "Feb 2020 - Feb 2023",
+    title: "Full-stack Developer",
+    location: "Upwork",
+    type: "Remote",
+    description: "Assisted in developing software solutions...",
+  },
+  {
+    date: "Jan 2022 - Aug 2023",
+    title: "Software Specialist",
+    location: "Freelance",
+    type: "Remote",
+    description: "Assisted in developing software solutions...",
+  },
+];

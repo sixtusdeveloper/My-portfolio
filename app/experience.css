@@ -1,0 +1,116 @@
+/* Global or module CSS file */
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Timeline container elements */
+.timeline-container {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+
+/* Left-aligned timeline */
+.timeline-container.left {
+  left: 0;
+}
+
+/* Right-aligned timeline */
+.timeline-container.right {
+  left: 50%;
+}
+
+/* Add a circle on the timeline */
+.timeline-icon {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #bbb;
+  border: 4px solid #ffffff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Clearfix for float issues */
+.timeline-container::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* Style for the timeline element content */
+.timeline-container .bg-black-200 {
+  position: relative;
+  padding: 20px;
+  background: inherit;
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Arrow indicating the point on the timeline */
+.timeline-container.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #ccc;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #ccc;
+}
+
+.timeline-container.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #ccc;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #ccc transparent transparent;
+}
+
+/* Adjusting the position of the content box */
+.timeline-container.left .bg-black-200 {
+  left: -100%;
+}
+
+.timeline-container.right .bg-black-200 {
+  left: 0;
+}
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Position the content in the middle */
+  .timeline-container.left,
+  .timeline-container.right {
+    left: 0;
+  }
+
+  .timeline-container.left .bg-black-200,
+  .timeline-container.right .bg-black-200 {
+    left: 0%;
+  }
+
+  .timeline-icon {
+    left: 50%;
+    margin-left: -12px;
+  }
+}

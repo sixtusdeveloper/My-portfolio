@@ -1,47 +1,44 @@
 import React from 'react';
-
-const experiences = [
-  {
-    position: 'Software Engineer',
-    company: 'Tech Innovators',
-    duration: 'Jan 2022 - Present',
-    description: 'Developed and maintained web applications using React, Node.js, and other modern technologies. Collaborated with cross-functional teams to deliver high-quality software solutions.',
-  },
-  {
-    position: 'Frontend Developer',
-    company: 'Creative Solutions',
-    duration: 'Jun 2020 - Dec 2021',
-    description: 'Designed and implemented user-friendly interfaces for web applications. Optimized website performance and improved user experience, leading to a 20% increase in user engagement.',
-  },
-  {
-    position: 'Junior Developer',
-    company: 'NextGen Technologies',
-    duration: 'Jan 2019 - May 2020',
-    description: 'Assisted in the development of web applications and contributed to backend APIs. Gained experience in full-stack development and learned best practices in software engineering.',
-  },
-];
+import { experiences } from '@/data';
+import { Spotlight } from './ui/Spotlight';
 
 const Experience = () => {
   return (
-    <div className="relative md:pt-10 mx-auto max-w-7xl px-6 lg:px-16 pb-20" id="Experience">
-      <h1 className="heading text-white font-bold text-center text-[2.7rem] leading-snug tracking-wider">
-        My&nbsp;<span className="text-purple">Experience</span>
-      </h1>
-      <div className="mt-10 space-y-8">
-        {experiences.map((exp, index) => (
-          <div key={index} className="flex flex-col md:flex-row md:space-x-6 bg-black-100 p-6 rounded-lg shadow-lg border border-gray-700">
-            <div className="md:w-1/4 text-gray-400">
-              <h2 className="text-xl font-semibold text-white">{exp.position}</h2>
-              <p className="text-sm text-purple-500">{exp.company}</p>
-              <p className="text-sm">{exp.duration}</p>
-            </div>
-            <div className="md:w-3/4 mt-4 md:mt-0 text-gray-300">
-              <p>{exp.description}</p>
-            </div>
+    <section id="Experience" className="relative md:pt-10 mx-auto max-w-6xl px-4 lg:px-8 pb-20">
+
+      <div className='relative'>
+        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
+        <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
+        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
+      </div>
+
+      <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.2] absolute flex items-center justify-center top-0 left-0">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      </div>
+      <div className='my-8 relative text-center'>
+        <h2 className="text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider mb-8">My <span className="text-purple">Experience</span></h2>
+      </div>
+      <div className="timeline">
+        {experiences.map((experience, index) => (
+          <div
+            key={index}
+            className={`timeline-container ${index % 2 === 0 ? 'left' : 'right'}`}
+          >
+            <div className="timeline-icon"></div>
+      
+              <div className="bg-black-200 border border-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 className="text-lg font-bold tracking-wide text-white">{experience.title}</h3>
+                <span className='inline-flex space-x-2'>
+                  <p className="text-sm text-white-200 mb-2">{experience.location}&nbsp;-&nbsp;<span className="text-sm text-purple">{experience.type}</span></p>
+                </span>
+                <time className="block text-xs mb-4 text-gray-400">{experience.date}</time>
+                <p className="text-gray-400">{experience.description}</p>
+              </div>
+            
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

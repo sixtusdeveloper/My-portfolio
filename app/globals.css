@@ -35,6 +35,11 @@
     --radius: 0.5rem;
   }
 
+  /* html {
+    --line-color: rgba(255, 255, 255, 0.2);
+    /* --line-color: #e5e7eb; */
+  
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -94,3 +99,106 @@
   object-fit: cover !important;
   border-radius: 50% !important;
 }
+
+/*---------------- Timeline styles ===================*/
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Timeline vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: darkslategrey;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Container on the left */
+.timeline-container.left {
+  left: 0;
+}
+
+/* Container on the right */
+.timeline-container.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeline-container.left::after {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent transparent darkslategrey;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeline-container.right::after {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent darkslategrey transparent transparent;
+}
+
+/* Circle in the center */
+.timeline-container .timeline-icon {
+  width: 20px;
+  height: 20px;
+  background-color: darkslategrey;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: -11px;
+  /* left: -45px; */
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-container.left::after, .timeline-container.right::after {
+    left: 60px;
+    border: none;
+  }
+
+  .timeline::after {
+    left: 30px;
+  }
+
+  .timeline-container.left, .timeline-container.right {
+    left: 0;
+  }
+
+  .timeline-container .timeline-icon {
+    left: 20px;
+  }
+}
+
+
+

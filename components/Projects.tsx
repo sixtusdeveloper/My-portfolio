@@ -32,7 +32,7 @@ const Projects = () => {
 
   return (
     <div className="relative md:pt-10 mx-auto max-w-7xl px-6 lg:px-10 pb-20" id="Projects">
-      <h1 className="text-white font-bold text-center text-[2.7rem] leading-snug tracking-wider">
+      <h1 className="text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">
         My&nbsp;<span className="text-purple">Recent Projects</span>
       </h1>
       <div className="flex relative flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
@@ -42,7 +42,7 @@ const Projects = () => {
             key={id}
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[480px] w-[90vw] overflow-hidden sm:h-[50vh] h-[30vh] mb-4 lg:mb-10">
+              <div className="relative flex items-center justify-center sm:w-[480px] w-[90vw] overflow-hidden sm:h-[50vh] h-[33vh] mb-4 lg:mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden rounded-3xl lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}

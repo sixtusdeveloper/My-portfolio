@@ -9,7 +9,7 @@ import React from 'react'
 const Clients = () => {
   return (
     <div className="py-8" id="Clients">
-      <h1 className="heading text-white mb-8 font-bold text-center text-[2.7rem] leading-snug tracking-wider">
+      <h1 className="heading text-white mb-8 font-bold text-center text-[2.4rem] leading-snug tracking-wide">
       Satisfied 
         <span className="text-purple">&nbsp;Clients</span>
       </h1>

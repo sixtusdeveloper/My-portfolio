@@ -36,6 +36,7 @@ const Collaboration = ({
               src={CompanyImgOne || "/client01.png"}
               width={200}
               height={100}
+              style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
               className="col-span-2 max-h-45 w-full object-contain lg:col-span-1"
             />
             <Image
@@ -43,6 +44,7 @@ const Collaboration = ({
               src={CompanyImgTwo || "/upwork-logo.png"}
               width={200}
               height={100}
+              style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
               className="col-span-2 max-h-45 w-full object-contain lg:col-span-1"
             />
             <Image
@@ -50,6 +52,7 @@ const Collaboration = ({
               src={CompanyImgThree || "/Altschool-logo.png"}
               width={200}
               height={100}
+              style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
               className="col-span-2 max-h-45 w-full object-contain lg:col-span-1"
             />
             
@@ -58,6 +61,7 @@ const Collaboration = ({
               src={CompanyImgFour || "/freelancer-logo.png"}
               width={200}
               height={100}
+              style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
               className="col-span-2 max-h-45 w-full object-contain sm:col-start-2 lg:col-span-1"
             />
             
@@ -66,13 +70,14 @@ const Collaboration = ({
               src={CompanyImgFive || "/skilledup-life-logo.png"}
               width={200}
               height={100}
+              style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
               className="col-span-2 col-start-2 max-h-45 w-full object-contain sm:col-start-auto lg:col-span-1"
             />
           
           </div>
           <div className="hidden sm:mt-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-4 my-1 text-sm leading-6 text-blue-300 ring-1 bg-black-300/10 hover:ring-gray-900/20">
-              Over 35 companies use my Solutions to better their business.{" "}
+              Over 35 companies use my solutions to better their business.{" "}
               <Link href="/pages/customer-stories" legacyBehavior>
                 <a href="#" className="font-semibold text-purple">
                   <span aria-hidden="true" className="absolute inset-0" />

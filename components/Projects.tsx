@@ -72,7 +72,7 @@ const Projects = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="flex relative flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
+      <div className="flex relative flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-4">
         {currentProjects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             className="sm:h-[41rem] h-[28rem] lg:min-h-[29.5rem] flex items-center justify-center sm:w-[480px] w-[90vw]"

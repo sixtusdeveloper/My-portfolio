@@ -32,13 +32,13 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-blue-300 ring-1 bg-black-300/10 hover:ring-gray-900/20">
-              Engineering Excellence in Every Line of Code.{" "}
+              Engineering excellence in every line of code.{" "}
               <a
-                href="#"
+                href="https://github.com/sixtusdeveloper/" target="_blank" rel="noopener noreferrer"
                 className="font-semibold text-purple"
               >
                 <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                Check my codebase&nbsp;<span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>

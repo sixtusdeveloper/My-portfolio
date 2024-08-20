@@ -1,9 +1,9 @@
 import React from "react";
 import CompanyImgOne from "@/public/client01.png";
-import CompanyImgTwo from "@/public/client02.png";
-import CompanyImgThree from "@/public/client03.png";
-import CompanyImgFour from "@/public/client04.png";
-import CompanyImgFive from "@/public/client05.png";
+import CompanyImgTwo from "@/public/altschool-logo.png";
+import CompanyImgThree from "@/public/skilledup-life-logo.png";
+import CompanyImgFour from "@/public/freelancer-logo.png";
+import CompanyImgFive from "@/public/upwork-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,38 +34,41 @@ const Collaboration = ({
             <Image
               alt="Transistor"
               src={CompanyImgOne || "/client01.png"}
-              width={400}
-              height={200}
+              width={200}
+              height={100}
               className="col-span-2 max-h-45 w-full object-contain lg:col-span-1"
             />
             <Image
               alt="Reform"
-              src={CompanyImgTwo || "/client02.png"}
-              width={400}
-              height={200}
+              src={CompanyImgTwo || "/upwork-logo.png"}
+              width={200}
+              height={100}
               className="col-span-2 max-h-45 w-full object-contain lg:col-span-1"
             />
             <Image
               alt="Tuple"
-              src={CompanyImgThree || "/client03.png"}
-              width={400}
-              height={200}
+              src={CompanyImgThree || "/Altschool-logo.png"}
+              width={200}
+              height={100}
               className="col-span-2 max-h-45 w-full object-contain lg:col-span-1"
             />
+            
             <Image
               alt="SavvyCal"
-              src={CompanyImgFour || "/client04.png"}
-              width={400}
-              height={200}
+              src={CompanyImgFour || "/freelancer-logo.png"}
+              width={200}
+              height={100}
               className="col-span-2 max-h-45 w-full object-contain sm:col-start-2 lg:col-span-1"
             />
+            
             <Image
               alt="Statamic"
-              src={CompanyImgFive || "/client05.png"}
-              width={400}
-              height={200}
+              src={CompanyImgFive || "/skilledup-life-logo.png"}
+              width={200}
+              height={100}
               className="col-span-2 col-start-2 max-h-45 w-full object-contain sm:col-start-auto lg:col-span-1"
             />
+          
           </div>
           <div className="hidden sm:mt-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-4 my-1 text-sm leading-6 text-blue-300 ring-1 bg-black-300/10 hover:ring-gray-900/20">

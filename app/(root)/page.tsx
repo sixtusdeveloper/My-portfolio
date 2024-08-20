@@ -1,11 +1,11 @@
-// "use client"; // Ensure the component is a client-side component
+"use client";
 
 import React from "react";
 import NavBar from "@/components/Navbar";
 import { navigation } from '@/data';
 import Hero from "@/components/Hero";
 import Services from '@/components/Services';
-import { SignedIn, SignedOut, RedirectToSignIn, useUser } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import About from "@/components/About";
@@ -39,8 +39,9 @@ export default function Home() {
           </div>
         </main>
       </SignedIn>
+
       <SignedOut>
-        <RedirectToSignIn />
+        <UserButton />
       </SignedOut>
     </>
   );

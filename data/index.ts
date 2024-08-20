@@ -16,9 +16,9 @@ export const gridItems = [
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    className: "relative lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[80vh] overflow-hidden",
+    className: "relative lg:col-span-3 md:col-span-6 md:row-span-4 min-h-[65vh] lg:min-h-[80vh] overflow-hidden",
     imgClassName: "w-full h-full object-cover",
-    titleClassName: "absolute bottom-0 left-0 right-0 p-4 text-white justify-end z-10",
+    titleClassName: "absolute bottom-4 lg:bottom-0 left-0 right-0 p-4 text-white justify-end lg:justify-end z-10",
     img: "/profile.jpg",
     spareImg: "",
   },
@@ -115,6 +115,7 @@ export const projects = [
     img: "/project01.avif",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "/ui.earth.com",
+    category: "Fullstack",
   },
   {
     id: 2,
@@ -123,6 +124,7 @@ export const projects = [
     img: "/project02.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "/ui.yoom.com",
+    category: "Fullstack",
   },
   {
     id: 3,
@@ -131,6 +133,7 @@ export const projects = [
     img: "/project03.avif",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "/ui.aiimg.com",
+    category: "Frontend",
   },
   {
     id: 4,
@@ -139,6 +142,7 @@ export const projects = [
     img: "/project04.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Frontend",
   },
   {
     id: 5,
@@ -147,6 +151,7 @@ export const projects = [
     img: "/project05.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Fullstack",
   },
   {
     id: 6,
@@ -155,6 +160,7 @@ export const projects = [
     img: "/project06.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Fullstack",
   },
   {
     id: 7,
@@ -163,6 +169,7 @@ export const projects = [
     img: "/project07.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Frontend",
   },
   {
     id: 8,
@@ -171,6 +178,7 @@ export const projects = [
     img: "/project08.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Fullstack",
   },
   {
     id: 9,
@@ -179,6 +187,7 @@ export const projects = [
     img: "/project09.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Fullstack",
   },
   {
     id: 10,
@@ -187,6 +196,7 @@ export const projects = [
     img: "/project10.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Frontend",
   },
   {
     id: 11,
@@ -195,6 +205,7 @@ export const projects = [
     img: "/project11.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    cetegory: "Frontend",
   },
   {
     id: 12,
@@ -203,6 +214,7 @@ export const projects = [
     img: "/project12.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    category: "Frontend",
   },
   {
     id: 13,
@@ -211,22 +223,7 @@ export const projects = [
     img: "/project13.avif",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
-  },
-  {
-    id: 14,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/project14.avif",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
-  {
-    id: 15,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/project15.avif",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    category: "Frontend",
   },
 ];
 

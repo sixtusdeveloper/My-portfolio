@@ -34,7 +34,7 @@ const Hero = () => {
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-blue-300 ring-1 bg-black-300/10 hover:ring-gray-900/20">
               Engineering Excellence in Every Line of Code.{" "}
               <a
-                href="https://chattereditor.vercel.app/"
+                href="#"
                 className="font-semibold text-purple"
               >
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -65,7 +65,7 @@ const Hero = () => {
             my projects and see how I turn ideas into reality. Let's create
             something amazing together!
           </p>
-          <div className="flex flex-row justify-center items-center mb-2 space-y-4 md:space-y-0 md:space-x-4">
+          <div className="flex flex-row justify-center items-center mb-2 space-x-4 md:space-y-0 md:space-x-4">
             <Link href="/" legacyBehavior>
               <a rel="noopener noreferrer">
                 <MagicButton

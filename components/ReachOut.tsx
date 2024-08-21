@@ -5,7 +5,7 @@ import Image from "next/image";
 const ReachOut = () => {
   return (
     <div className="relative lg:pt-10 mx-auto max-w-4xl px-6 lg:px-16 pb-20" id="ReachOut">
-      <h1 className="heading text-white p-8 lg:p-8 font-bold text-center text-[2.4rem] leading-snug tracking-wider">
+      <h1 className="text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">
         Ready to take your <span className="text-purple">digital presence</span> to the next level?
       </h1>
       <p className='text-white-100 lg:mt-6 my-5 text-center text-md'>
@@ -15,7 +15,7 @@ const ReachOut = () => {
       <div className="flex justify-center items-center space-x-8 mt-8">
         <a href="mailto:sixtusushrey@gmail.com?subject=Let's%20connect!" className="text-white-100 flex items-center space-x-2 hover:text-purple">
             <Image 
-                src="/Gmail.png" 
+                src="/Gmail.png"
                 alt="Mail" 
                 width={28} 
                 height={28} 

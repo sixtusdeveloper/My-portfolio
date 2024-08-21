@@ -21,8 +21,8 @@ const Collaboration = ({
   CompanyImgFive?: string;
 }) => {
   return (
-    <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-26">
-      <h1 className="text-white font-bold mt-10 text-center text-[2.4rem] leading-snug tracking-wider">
+    <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-10 lg:py-16">
+      <h1 className="text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">
         Trusted <span className="text-purple">by Companies</span>
       </h1>
       <div className="bg-black-100 py-14 sm:py-12">

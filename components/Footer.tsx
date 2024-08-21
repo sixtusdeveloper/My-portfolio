@@ -9,7 +9,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black-200 text-white border-t border-gray-800 py-6">
+    <footer className="bg-black-200 text-white border-t border-gray-800 p-6">
       <div className="flex justify-center space-x-4 mb-4">
         <a
           href="https://github.com/sixtusdeveloper"

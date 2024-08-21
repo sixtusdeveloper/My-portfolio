@@ -321,7 +321,7 @@ export const experiences = [
   {
     date: "Jan 2022 - Aug 2023",
     title: "Software Specialist",
-    location: "Freelance",
+    location: "Freelancer",
     type: "Remote",
     description: "Assisted in developing software solutions...",
   },
@@ -335,6 +335,7 @@ export const education = [
     type: "Full-time",
     description: "Specialized in Software engineering - Mean stack, Mern stack, and more...",
     status: "Graduated - Awaiting Certification",
+    img: '/cert06.png'
   },
   {
     degree: "Diploma in DevOps Engineering",
@@ -343,6 +344,7 @@ export const education = [
     type: "Full-time",
     description: "Specialized in DevOps engineering - Kubernetes, Docker, Google-cloud CI/CD pipelines and automation...",
     status: "Graduated - Certified",
+    img: '/cert01.jpg'
   },
   {
     degree: "Diploma in Software Project Management", 
@@ -351,5 +353,6 @@ export const education = [
     type: "Full-time",
     description: "Specialized in software development project management - Agile, Scrum, Kanban, and more...",
     status: "Graduated - Certified",
+    img: '/cert02.png'
   },
 ];

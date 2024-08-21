@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 const Approach = () => {
   return (
     <section className="w-full py-20" id="Approach">
-      <h1 className="heading text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">
+      <h1 className="text-white font-bold text-center text-[2.4rem] leading-snug tracking-wider">
         My
         <span className="text-purple">&nbsp;Approach</span>
       </h1>

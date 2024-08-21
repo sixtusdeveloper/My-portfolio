@@ -28,8 +28,8 @@ const Hero = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+      <div className="flex justify-center relative my-16 lg:my-20 z-10">
+        <div className="max-w-[90vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-blue-300 ring-1 bg-black-300/10 hover:ring-gray-900/20">
               Engineering excellence in every line of code.{" "}
@@ -56,7 +56,7 @@ const Hero = () => {
           <h1 className="text-[2.8rem] font-bold lg:font-bolder tracking-wide lg:tracking-wider text-center text-white lg:text-[3rem]">
             Welcome to my <span className="text-purple">Portfolio</span>
           </h1>
-          <p className="text-center md:tracking-wide leading-7 sm:tracking-wide my-4 text-[14px] lg:px-6 px-2 lg:text-[14px] mb-8">
+          <p className="text-center md:tracking-wide leading-7 sm:tracking-wide my-4 text-[14px] lg:px-6 px-4 mb-8">
             Hello, I'm Sixtus Aondoakaa, a dedicated software engineer with a
             passion for crafting efficient and scalable solutions. Here, you'll
             find a showcase of my work, ranging from innovative web applications

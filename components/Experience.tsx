@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState } from "react";
-import { experiences, education } from "@/data"; // Import both experiences and education data
+
+import React, { useState, useRef, useEffect } from "react";
+import { experiences, education } from "@/data";
 import { Spotlight } from "./ui/Spotlight";
-import Link from "next/link";
-
-
+import Modal from "./Modal";
+import Image from 'next/image';
+import { IoClose } from 'react-icons/io5';
+import { AiOutlineDownload } from 'react-icons/ai';
 
 // Truncate the course to a maximum length
 const MAX_COURSE_LENGTH = 35;
@@ -13,6 +15,7 @@ const truncateCourse = (text: string, maxLength: number): string => {
   if (text.length <= maxLength) return text;
   return `${text.slice(0, maxLength)}...`;
 };
+
 // Truncate the Description to a maximum length
 const MAX_DESCRIPTION_LENGTH = 60;
 const truncateDescription = (text: string, maxLength: number): string => {
@@ -20,9 +23,77 @@ const truncateDescription = (text: string, maxLength: number): string => {
   return `${text.slice(0, maxLength)}...`;
 };
 
+// Define the type for education items
+type EducationItem = {
+  degree: string;
+  institution: string;
+  type: string;
+  status: string;
+  date: string;
+  description: string;
+  img: string;
+};
 
 const Experience = () => {
-  const [selectedSection, setSelectedSection] = useState("work"); // State to manage toggling between sections
+  const [selectedSection, setSelectedSection] = useState("work");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedEducation, setSelectedEducation] = useState<EducationItem | null>(null);
+  const [isLoading, setIsLoading] = useState(false); // Loading state
+  const [downloadStatus, setDownloadStatus] = useState<"idle" | "downloading" | "downloaded">("idle"); // Download state
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  const openModal = (educationItem: EducationItem) => {
+    setIsLoading(true); // Start loading
+    setSelectedEducation(educationItem);
+
+    // Simulate a loading delay (e.g., 2 seconds)
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsModalOpen(true);
+    }, 2000); // Adjust the delay as needed
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedEducation(null);
+    setDownloadStatus("idle"); // Reset download status when modal closes
+  };
+
+  // Close modal if user clicks outside of it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        closeModal();
+      }
+    };
+    
+    if (isModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen]);
+
+  const handleDownload = () => {
+    if (selectedEducation?.img) {
+      setDownloadStatus("downloading"); // Set status to downloading
+      const link = document.createElement('a');
+      link.href = selectedEducation.img;
+      link.download = `${selectedEducation.degree}-certificate.jpg`;
+      link.click();
+      
+      setTimeout(() => {
+        setDownloadStatus("downloaded"); // Set status to downloaded after a delay
+        setTimeout(() => {
+          setDownloadStatus("idle"); // Reset status to idle after another delay
+        }, 2000); // Adjust this delay as needed
+      }, 2000); // Simulate download time
+    }
+  };
 
   return (
     <section
@@ -136,24 +207,101 @@ const Experience = () => {
                   </time>
                   <div className="text-gray-400 text-sm leading-6">
                     {truncateDescription(edu.description, MAX_DESCRIPTION_LENGTH)}&nbsp;
-                    <Link href="/pages/customer-stories" legacyBehavior>
-                      <a href="#" className="font-medium tracking-wider text-sm text-purple hover:text-blue-100">
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        Verify credentials{" "}
-                        <span aria-hidden="true">&rarr;</span>
-                      </a>
-                    </Link>
+                    <a
+                      href="#"
+                      onClick={() => openModal(edu)}
+                      className="font-medium tracking-wider text-sm text-purple hover:text-blue-100"
+                    >
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      verify credentials{" "}
+                      <span aria-hidden="true">&rarr;</span>
+                    </a>
                   </div>
-                  
-                  
                 </div>
               </div>
             ))}
       </div>
+
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} onClose={closeModal}>
+          <div
+            ref={modalRef}
+            className="p-6 max-h-[80vh] overflow-y-auto no-scrollbar relative bg-black-800 border border-gray-900 rounded-lg shadow-lg"
+          >
+            {isLoading ? (
+              <div className="flex justify-center items-center">
+                <div className="w-12 h-12 border-4 border-t-4 border-purple rounded-full animate-spin"></div>
+                <p className="ml-4 text-white">Loading...</p>
+              </div>
+            ) : (
+              <div>
+                <h3 className="text-white font-semibold text-xl mb-4 tracking-wider">
+                  {selectedEducation?.degree}
+                </h3>
+                <p className="mb-4">
+                  <span className="font-medium text-gray-400 text-sm tracking-wide">Institution:</span>&nbsp;<span className="text-white-100 text-sm tracking-wide">{selectedEducation?.institution}</span>
+                </p>
+                <p className="mb-4">
+                  <span className="font-medium text-gray-400 text-sm tracking-wide">Type:</span>&nbsp;<span className="text-white-100 text-sm tracking-wide">{selectedEducation?.type}</span>
+                </p>
+                <p className="mb-4">
+                  <span className="font-medium text-gray-400 text-sm tracking-wide">Status:</span>&nbsp;<span className="text-white-100 text-sm tracking-wide">{selectedEducation?.status}</span>
+                </p>
+                <p className="mb-4">
+                  <span className="font-medium text-gray-400 text-sm tracking-wide">Date:</span>&nbsp;<span className="text-white-100 text-sm tracking-wide">{selectedEducation?.date}</span>
+                </p>
+                <p className="mb-6 leading-6 text-gray-100 text-sm tracking-wide">{selectedEducation?.description}</p>
+                <div className="flex justify-between items-center mb-4">
+                  <Image
+                    src={selectedEducation?.img || "/fallback.jpg"}
+                    alt={selectedEducation?.degree || "Certificate Image"}
+                    className="rounded-md w-full"
+                    width={400}
+                    height={300}
+                  />
+                </div>
+                
+                <div className="mt-4 flex items-center justify-center">
+                  <button
+                    onClick={handleDownload}
+                    className={`px-4 py-2 flex items-center justify-center space-x-2 rounded-md shadow-md ${
+                      downloadStatus === "downloaded"
+                        ? "bg-green-500 text-white"
+                        : "bg-blue-600 text-white hover:bg-blue-700"
+                    } focus:outline-none`}
+                  >
+                    <AiOutlineDownload className="mr-2" />
+                    {downloadStatus === "idle" && "Download Certificate"}
+                    {downloadStatus === "downloading" && "Downloading..."}
+                    {downloadStatus === "downloaded" && "Downloaded"}
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </Modal>
+      )}
+       {/* Loading animation */}
+       {isLoading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+          <div className="w-16 h-16 border-t-4 border-b-4 border-white rounded-full animate-spin"></div>
+        </div>
+      )}
     </section>
   );
 };
 
 export default Experience;
+
+
+
+
+
+
+
+
+
+
+
 
 

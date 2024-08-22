@@ -112,7 +112,7 @@ const Projects = () => {
             <button
               key={pageNumber}
               onClick={() => paginate(pageNumber)}
-              className={`px-4 py-2 mx-1 rounded-md transition-all duration-300 ${
+              className={`px-4 py-2 mx-2 rounded-md transition-all duration-300 ${
                 currentPage === pageNumber
                   ? "bg-blue-800 text-white"
                   : "bg-gray-900 text-white border border-gray-800 hover:bg-blue-600 hover:border-blue-600"

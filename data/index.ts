@@ -339,7 +339,7 @@ export const services: Service[] = [
       paragraphs: [
         "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
         "Whether you need email verification, multi-factor authentication, or social media logins, I provide secure and scalable solutions to ensure that your users have a seamless registration experience.",
-        "My services include custom user management dashboards and integration with popular platforms like Firebase, Auth0, or custom backends."
+        "My services include custom user management dashboards and integration with popular platforms like Firebase, Appwrite, Auth0, or custom backends."
       ],
       images: [
         {

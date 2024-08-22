@@ -64,7 +64,7 @@ const Services = () => {
               <Image src={service.thumbnail} alt={service.thumbnail} width={250} height={250} className="lg:w-32 md:w-20 w-16" />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">{service.title}</h1>
-                <p className="text-start text-white-100 tracking-wide leading-6 mt-3 font-semibold">{service.desc}</p>
+                <p className="text-sm text-start text-white-100 tracking-wide leading-6 mt-3 font-semibold">{service.desc}&nbsp;<span className="text-purple text-sm text-end font-medium tracking-wide">read more</span></p>
               </div>
             </div>
           </Button>

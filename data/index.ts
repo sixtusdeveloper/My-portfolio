@@ -1,4 +1,5 @@
 import React from "react";
+// import { Services } from "@/types";
 
 
 //============================= Home Page Navigation links ============================//
@@ -11,6 +12,7 @@ export const navigation = [
     { name: 'Clients', href: '#Clients' },
 ];
 
+//=============================  Hero Section Data ============================//
 export const gridItems = [
   {
     id: 1,
@@ -75,38 +77,7 @@ export const gridItems = [
   },
 ];
 
-//========================== Work Experience Section Data ==========================//
-export const services  = [
-    {
-        id: 1,
-        title: "User Registration and Authentication",
-        desc: "Secure and seamless user onboarding with email and social media authentication.",
-        className: "md:col-span-2",
-        thumbnail: "/exp1.svg",
-    },
-    {
-        id: 2,
-        title: "Content Creation and Publishing",
-        desc: "Rich text editor for creating and publishing engaging content with ease.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp2.svg",
-    },
-    {
-        id: 3,
-        title: "Personalized Content Discovery",
-        desc: "Discover new content based on your interests and reading history.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp3.svg",
-    },
-    {
-        id: 4,
-        title: "Social Interactions",
-        desc: "Engage with other users through comments and likes..",
-        className: "md:col-span-2",
-        thumbnail: "/exp4.svg",
-    },
-    ];
-
+//=============================  Project data ====================================//
 export const projects = [
   {
     id: 1,
@@ -227,7 +198,7 @@ export const projects = [
   },
 ];
 
-//===============================  Testimonials Section Data ================================//
+//=============================  Testimonials Section Data =======================//
 export const testimonials = [
     {
       quote: "Our experience with Chatter has been transformative. Sixtus’s platform has significantly streamlined our communication and project management. His prompt responses and the intuitive design of Chatter have truly elevated our team's productivity and collaboration, making it an indispensable tool for us.",
@@ -294,7 +265,7 @@ export const testimonials = [
     },
   ];
 
-// data/experienceData.js
+//============================  data/experienceData.js ============================//
 
 export const experiences = [
   {
@@ -327,6 +298,7 @@ export const experiences = [
   },
 ];
 
+//==================================  Education data ==============================//
 export const education = [
   {
     degree: "Advanced Diploma in Software Engineering",
@@ -355,4 +327,132 @@ export const education = [
     status: "Graduated - Certified",
     img: '/cert02.png'
   },
+];
+
+//================================= Services data  ================================//
+export const services: Service[] = [
+  {
+    id: 1,
+    title: "User Registration and Authentication",
+    desc: "Secure and seamless user onboarding with email and social media authentication.",
+    detailedDesc: {
+      paragraphs: [
+        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
+        "Whether you need email verification, multi-factor authentication, or social media logins, I provide secure and scalable solutions to ensure that your users have a seamless registration experience.",
+        "My services include custom user management dashboards and integration with popular platforms like Firebase, Auth0, or custom backends."
+      ],
+      images: [
+        {
+          src: "/authentication02.jpg",
+          alt: "User Management Dashboard"
+        },
+        {
+          src: "/authentication.jpg",
+          alt: "Multi-Factor Authentication"
+        }
+      ],
+      textDesc: [
+      "In today's digital landscape, where data breaches and cyber threats are increasingly prevalent, ensuring robust security measures is paramount. OAuth, a widely adopted open standard for access delegation, exemplifies this commitment to security. By enabling secure, token-based authentication and authorization, OAuth provides a mechanism for applications to access user resources without exposing sensitive credentials.",
+      "The significance of OAuth in maintaining security cannot be overstated. It minimizes the risk of credential leakage by eliminating the need for users to share their passwords with third-party applications. Instead, OAuth leverages access tokens that are securely managed and periodically refreshed, reducing the potential for unauthorized access.",
+      "In addition to OAuth, JSON Web Tokens (JWT) offer a secure method for transmitting information between parties. JWTs are digitally signed, ensuring data integrity and authenticity. By leveraging JWTs in user authentication processes, developers can enhance security and mitigate the risk of data tampering or interception.",
+      "Implementing OAuth and JWT in user authentication systems is essential for safeguarding user data and maintaining trust. By adopting these industry-standard protocols, organizations can enhance security, protect user privacy, and build a foundation of trust with their user base."
+      ],
+      icons: [
+        {
+          src: "/OAuth01.png",
+          alt: "OAuth Icon"
+        },
+        {
+          src: "/OAuth02.png",  
+          alt: "JWT Icon"
+        }
+      ],
+    },
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 2,
+    title: "Content Creation and Publishing",
+    desc: "Rich text editor for creating and publishing engaging content with ease.",
+    detailedDesc: {
+      paragraphs: [
+        "Develop dynamic content creation platforms that allow users to create, edit, and publish content effortlessly.",
+        "I specialize in building intuitive WYSIWYG editors, markdown-based editors, and custom content management systems tailored to your needs.",
+        "Whether it's a blogging platform, an article publication site, or a full-fledged content management system (CMS), my solutions are designed for scalability and ease of use."
+      ],
+      images: [
+        {
+          src: "/content03.jpg",
+          alt: "Content Creation Platform"
+        },
+        {
+          src: "/content.jpg",
+          alt: "WYSIWYG Editor"
+        }
+      ],
+      textDesc: [
+        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
+        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT."
+      ],
+    },
+    className: "md:col-span-2",
+    thumbnail: "/exp2.svg",
+  },
+  {
+    id: 3,
+    title: "Personalized Content Discovery",
+    desc: "Discover new content based on your interests and reading history.",
+    detailedDesc: {
+      paragraphs: [
+        "Leverage advanced algorithms and AI to provide users with personalized content recommendations.",
+        "My services include developing recommendation engines that analyze user behavior, preferences, and content interactions to serve up relevant articles, videos, and other media.",
+        "Enhance user engagement by helping them discover new and exciting content tailored to their tastes."
+      ],
+      images: [
+        {
+          src: "/content.jpg",
+          alt: "Content Discovery"
+        },
+        {
+          src: "/AI.png",
+          alt: "AI Recommendation Engine"
+        }
+      ],
+      textDesc: [
+        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
+        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT."
+      ],
+    },
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg",
+  },
+  {
+    id: 4,
+    title: "Social Interactions",
+    desc: "Engage with other users through comments and likes.",
+    detailedDesc: {
+      paragraphs: [
+        "Boost user engagement on your platform by integrating social interaction features such as comments, likes, shares, and more.",
+        "I create scalable solutions that foster community building, including real-time comment systems, user-generated content moderation, and integration with social media platforms.",
+        "My services ensure that your users can connect, interact, and share seamlessly."
+      ],
+      images: [
+        {
+          src: "/socials01.png",
+          alt: "Social Interactions"
+        },
+        {
+          src: "/comments01.png", 
+          alt: "Comment System"
+        }
+      ],
+      textDesc: [
+        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
+        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT."
+      ],
+    },
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  }
 ];

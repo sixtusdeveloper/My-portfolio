@@ -170,7 +170,6 @@
   position: absolute;
   top: 15px;
   left: -11px;
-  /* left: -45px; */
   z-index: 1;
 }
 
@@ -202,6 +201,37 @@
 
 
 
+
+
+/* Current styles for the timeline */
+.timeline-container .timeline-icon {
+  width: 20px;
+  height: 20px;
+  background-color: darkslategrey;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  z-index: 3; /* Ensure this is in front of the card content */
+}
+
+/* Circle icon on the left-side containers */
+.timeline-container.left .timeline-icon {
+  left: calc(100% - 11px); /* Adjusts icon to the right of the left container */
+}
+
+/* Circle icon on the right-side containers */
+.timeline-container.right .timeline-icon {
+  left: -11px; /* Positions icon to the left of the right container */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline-container .timeline-icon {
+    left: 20px !important; /* Adjust position for smaller screens */
+  }
+}
+
+
 /* Hide scrollbar for Chrome, Safari, and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -211,4 +241,59 @@
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+/*============================ Services Modal ===============================*/
+/* Modal overlay */
+.fixed.inset-0 {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Modal content */
+.bg-white {
+  background-color: white;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.modal-top-img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover; 
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+.modal-img{
+  width: 250px;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.oauth-icon{
+  width: 100px;
+  height: 100px;
+  object-fit: cover; 
+  border-radius: 50%;
+  overflow: hidden; 
 }

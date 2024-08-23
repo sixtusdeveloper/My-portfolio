@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
+import Image from "next/image";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
@@ -69,10 +70,13 @@ const Projects = () => {
             key={id}
             style={{ width: "460px", height: "400px" }}
           >
-            <img
+            <Image
               src={img}
               alt={title}
-              className="w-full h-3/5 object-cover transition-opacity duration-300 group-hover:opacity-75"
+              width={460}
+              height={400}
+              className="w-full h-3/5 object-cover transition-opacity duration-300 group-hover:opacity-75 project-img"
+              // style={{ width: 'auto', height: 'auto' }}
             />
             <div className="p-4">
               <h1 className="font-bold text-xl truncate">{title}</h1>
@@ -87,7 +91,14 @@ const Projects = () => {
                          transform: `translateX(-${5 * index + 2}px)`,
                        }}
                     >
-                      <img src={icon} alt="icon" className="p-2" />
+                      <Image 
+                      src={icon} 
+                      alt="icon" 
+                      width={8}
+                      height={8}
+                      className="p-2" 
+                      style={{ width: 'auto', height: 'auto' }}
+                      />
                     </div>
                   ))}
                 </div>

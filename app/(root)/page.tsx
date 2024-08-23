@@ -5,7 +5,7 @@ import NavBar from "@/components/Navbar";
 import { navigation } from '@/data';
 import Hero from "@/components/Hero";
 import Services from '@/components/Services';
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, RedirectToSignIn, useUser } from "@clerk/nextjs";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import About from "@/components/About";
@@ -41,7 +41,7 @@ export default function Home() {
       </SignedIn>
 
       <SignedOut>
-        <UserButton />
+        <RedirectToSignIn />
       </SignedOut>
     </>
   );

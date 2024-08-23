@@ -5,7 +5,6 @@ import { experiences, education } from "@/data";
 import { Spotlight } from "./ui/Spotlight";
 import Modal from "./Modal";
 import Image from 'next/image';
-import { IoClose } from 'react-icons/io5';
 import { AiOutlineDownload } from 'react-icons/ai';
 
 
@@ -23,18 +22,11 @@ const truncateDescription = (text: string, maxLength: number): string => {
   return `${text.slice(0, maxLength)}...`;
 };
 
-// Define the type for education items
-type EducationItem = {
-  degree: string;
-  institution: string;
-  type: string;
-  status: string;
-  date: string;
-  description: string;
-  img: string;
-};
+// Pagination
+
 
 const Experience = () => {
+  const [selectedWorkExperience, setSelectedWorkExperience] = useState<WorkExperienceItem | null>(null);
   const [selectedSection, setSelectedSection] = useState("work");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEducation, setSelectedEducation] = useState<EducationItem | null>(null);
@@ -44,12 +36,16 @@ const Experience = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null); // Reference to the experience section
   const scrollPosition = useRef(0); // Store the scroll position
 
-  const openModal = (educationItem: EducationItem) => {
+  const openModal = (item: EducationItem | WorkExperienceItem) => {
     scrollPosition.current = window.scrollY; // Capture the current scroll position
     setIsLoading(true); // Start loading
-    setSelectedEducation(educationItem);
-
-    // Simulate a loading delay (e.g., 2 seconds)
+  
+    if ('degree' in item) {
+      setSelectedEducation(item);
+    } else {
+      setSelectedWorkExperience(item);
+    }
+  
     setTimeout(() => {
       setIsLoading(false);
       setIsModalOpen(true);
@@ -59,9 +55,9 @@ const Experience = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedEducation(null);
-    setDownloadStatus("idle"); // Reset download status when modal closes
-
-    // Scroll back to the experience section smoothly
+    setSelectedWorkExperience(null);
+    setDownloadStatus("idle");
+  
     if (sectionRef.current) {
       window.scrollTo({
         top: scrollPosition.current,
@@ -69,8 +65,7 @@ const Experience = () => {
       });
     }
   };
-
-
+  
   // Close modal if user clicks outside of it
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -160,36 +155,50 @@ const Experience = () => {
       <div className="timeline">
         {selectedSection === "work"
           ? experiences.map((experience, index) => (
-              <div
-                key={index}
-                className={`timeline-container ${
-                  index % 2 === 0 ? "left" : "right"
-                }`}
-              >
-                <div className="timeline-icon"></div>
-
-                <div className="bg-black-200 border border-gray-800 p-6 rounded-lg shadow-lg">
-                  <h3 className="text-lg font-bold tracking-wide text-white">
-                    {experience.title}
-                  </h3>
-                  <p className="inline-flex space-x-2">
-                    <span className="text-sm text-white-200 mb-2">
-                      {experience.location}&nbsp;-&nbsp;
-                      <span className="text-sm text-purple">
-                        {experience.type}
-                      </span>
+            <div
+              key={index}
+              className={`timeline-container ${
+                index % 2 === 0 ? "left" : "right"
+              }`}
+            >
+              <div className="timeline-icon"></div>
+              <div className="bg-black-200 border border-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 className="text-lg font-bold tracking-wide text-white">
+                  {experience.title}
+                </h3>
+                <p className="inline-flex space-x-2">
+                  <span className="text-sm text-white-200 tracking-wide">
+                    {experience.organization}&nbsp;-&nbsp;
+                    <span className="text-sm text-purple">
+                      {experience.type}
                     </span>
-                  </p>
-                  <time
-                    className="block text-xs mb-4 text-gray-400"
-                    suppressHydrationWarning
+                  </span>
+                </p>
+                <p className="flex py-1 text-sm text-gray-100">{experience.nature}</p>
+                <time
+                  className="block text-xs mb-2 text-gray-400 tracking-wide"
+                  suppressHydrationWarning
+                >
+                  {experience.date}
+                </time>
+                <p className="text-white-100 text-sm tracking-wide">
+                  {experience.location}
+                </p>
+                <div className="text-gray-400 text-sm leading-6">
+                  {truncateDescription(experience.description, MAX_DESCRIPTION_LENGTH)}&nbsp;
+                  <a
+                    href="#"
+                    onClick={() => openModal(experience)}
+                    className="font-medium tracking-wider text-sm text-purple hover:text-blue-100"
                   >
-                    {experience.date}
-                  </time>
-                  <p className="text-gray-400">{experience.description}</p>
+                    <span aria-hidden="true" className="absolute inset-0" />
+                    Read more{" "}
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
                 </div>
               </div>
-            ))
+            </div>
+          ))
           : education.map((edu, index) => (
               <div
                 key={index}
@@ -226,75 +235,136 @@ const Experience = () => {
                       className="font-medium tracking-wider text-sm text-purple hover:text-blue-100"
                     >
                       <span aria-hidden="true" className="absolute inset-0" />
-                      view credentials{" "}
+                      View credentials{" "}
                       <span aria-hidden="true">&rarr;</span>
                     </a>
                   </div>
                 </div>
               </div>
-            ))}
+            ))
+          }
       </div>
-
-      {/* {isModalOpen && ( Have been causing the modal not to automatically scroll back to the previous section with smooth scroll */}
-        <Modal isOpen={isModalOpen} onClose={closeModal}>
-          <div
-            ref={modalRef}
-            className="p-6 max-h-[80vh] overflow-y-auto no-scrollbar relative bg-black-800 border border-gray-900 rounded-lg shadow-lg"
-          >
-            {isLoading ? (
-              <div className="flex justify-center items-center">
-                <div className="w-12 h-12 border-4 border-t-4 border-purple rounded-full animate-spin"></div>
-                <p className="ml-4 text-white tracking-wide">Loading...</p>
-              </div>
-            ) : (
-              <div>
-                <h3 className="text-white font-bold tracking-wide text-xl mb-4">
-                  {selectedEducation?.degree}
-                </h3>
-                <p className="mb-4">
-                  <span className="font-medium text-gray-400 text-sm tracking-wide">Institution:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.institution}</span>
-                </p>
-                <p className="mb-4">
-                  <span className="font-medium text-gray-400 text-sm tracking-wide">Type:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.type}</span>
-                </p>
-                <p className="mb-4">
-                  <span className="font-medium text-gray-400 text-sm tracking-wide">Status:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.status}</span>
-                </p>
-                <p className="mb-4">
-                  <span className="font-medium text-gray-400 text-sm tracking-wide">Date:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.date}</span>
-                </p>
-                <p className="mb-6 text-sm text-medium text-white-100 leading-6 tracking-wide">{selectedEducation?.description}</p>
-                <div className="flex justify-between items-center mb-4">
-                  <Image
-                    src={selectedEducation?.img || "/fallback.jpg"}
-                    alt={selectedEducation?.degree || "Certificate Image"}
-                    className="rounded-md w-full"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-               
-                <div className="mt-4 flex items-center justify-center">
-                  <button
-                    onClick={handleDownload}
-                    className={`px-4 py-2 flex items-center justify-center space-x-2 rounded-md shadow-md ${
-                      downloadStatus === "downloaded"
-                        ? "bg-green-500 text-white"
-                        : "bg-blue-600 text-white hover:bg-blue-700"
-                    } focus:outline-none`}
-                  >
-                    <AiOutlineDownload className="mr-2" />
-                    {downloadStatus === "idle" && "Download Certificate"}
-                    {downloadStatus === "downloading" && "Downloading..."}
-                    {downloadStatus === "downloaded" && "Downloaded"}
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-        </Modal>
-      {/* )} The closing tag for the modal was removed to allow the modal to automatically scroll back to the previous section with smooth scroll */}
-
+  
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <div
+          ref={modalRef}
+          className="p-6 max-h-[80vh] overflow-y-auto no-scrollbar relative bg-black-800 border border-gray-900 rounded-lg shadow-lg"
+        >
+          {isLoading ? (
+            <div className="flex justify-center items-center">
+              <div className="w-12 h-12 border-4 border-t-4 border-purple rounded-full animate-spin"></div>
+              <p className="ml-4 text-white tracking-wide">Loading...</p>
+            </div>
+          ) : (
+            <div>
+              {selectedEducation && (
+                <>
+                  <h3 className="text-white font-bold tracking-wide text-xl mb-4">
+                    {selectedEducation?.degree}
+                  </h3>
+                  <p className="mb-4">
+                    <span className="font-medium text-gray-400 text-sm tracking-wide">Institution:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.institution}</span>
+                  </p>
+                  <p className="mb-4">
+                    <span className="font-medium text-gray-400 text-sm tracking-wide">Type:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.type}</span>
+                  </p>
+                  <p className="mb-4">
+                    <span className="font-medium text-gray-400 text-sm tracking-wide">Status:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.status}</span>
+                  </p>
+                  <p className="mb-4">
+                    <span className="font-medium text-gray-400 text-sm tracking-wide">Date:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedEducation?.date}</span>
+                  </p>
+                  <p className="mb-6 text-sm text-medium text-white-100 leading-6 tracking-wide">{selectedEducation?.description}</p>
+                  <div className=" relative flex justify-center text-center w-full mb-4">
+                    <Image
+                      src={selectedEducation?.img || "/fallback.jpg"}
+                      alt={selectedEducation?.degree || "Certificate Image"}
+                      className="rounded-md w-full relative"
+                      width={600}
+                      height={300}
+                      objectFit="cover"
+                      style={{ width: 'auto', height: 'auto' }}
+                    />
+                  </div>
+                  <div className="mt-6 flex items-center justify-center">
+                    <button
+                      onClick={handleDownload}
+                      className={`px-4 py-2 flex items-center justify-center space-x-2 rounded-md shadow-md ${
+                        downloadStatus === "downloaded"
+                          ? "bg-green-500 text-white"
+                          : "bg-blue-600 text-white hover:bg-blue-700"
+                      } focus:outline-none`}
+                    >
+                      <AiOutlineDownload className="mr-2" />
+                      {downloadStatus === "idle" && "Download Certificate"}
+                      {downloadStatus === "downloading" && "Downloading..."}
+                      {downloadStatus === "downloaded" && "Downloaded"}
+                    </button>
+                  </div>
+                </>
+              )}
+                
+              {selectedWorkExperience && (
+                <>
+                  <div className="flex justify-between gap-8 space-x-6">
+                    <div>
+                      <h3 className="text-white font-bold tracking-wide text-xl mb-4">
+                        {selectedWorkExperience.title}
+                      </h3>
+                      <p className="mb-4">
+                        <span className="font-medium text-gray-400 text-sm tracking-wide">Organization:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedWorkExperience.organization}</span>
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium text-gray-400 text-sm tracking-wide">Type:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedWorkExperience.type}</span>
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium text-gray-400 text-sm tracking-wide">Nature:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedWorkExperience.nature}</span>
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium text-gray-400 text-sm tracking-wide">Location:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedWorkExperience.location}</span>
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium text-gray-400 text-sm tracking-wide">Date:</span>&nbsp;<span className="text-sm text-white-100 tracking-wide">{selectedWorkExperience.date}</span>
+                      </p>
+                      
+                    </div>
+                    <div>
+                      <Image 
+                      src={selectedWorkExperience.img || "/profile.jpg" }
+                      alt={selectedWorkExperience.title || "profile image" }
+                      className="rounded-md w-full"
+                      width={200}
+                      height={200}
+                      objectFit="cover"
+                      style={{ width: 'auto', height: 'auto' }}
+                      />
+                    </div>
+                  </div>
+                  <div className="relative py-4">
+                    <h4 className="text-white-100 font-bold tracking-wider text-lg my-4">Job description</h4> 
+                    <p className="text-sm text-medium text-white-100 leading-7 tracking-wide">{selectedWorkExperience.fullDesc}</p>
+                  </div>
+                  <div className="py-4 relative overflow-hidden">
+                    <h4 className="text-white-100 font-bold tracking-wider text-lg my-4">Technologies used</h4>
+                    <ul className="flex flex-wrap gap-4">
+                      {selectedWorkExperience.technologies.map((tech, index) => (
+                        <li
+                          key={index}
+                          className="px-3 py-2 border border-gray-800 rounded-lg bg-transparent text-sm text-gray-400 leading-6 tracking-wide"
+                        >
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+        </div>
+      </Modal>
+ 
       {/* Loading animation */}
       {isLoading && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">

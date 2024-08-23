@@ -61,7 +61,13 @@ const Services = () => {
             onClick={() => openModal(service)}
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <Image src={service.thumbnail} alt={service.thumbnail} width={250} height={250} className="lg:w-32 md:w-20 w-16" />
+              <Image 
+              src={service.thumbnail} 
+              alt={service.thumbnail} 
+              width={250} height={250} 
+              className="lg:w-32 md:w-20 w-16" 
+              style={{ width: 'auto', height: 'auto' }}
+              />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">{service.title}</h1>
                 <p className="text-sm text-start text-white-100 tracking-wide leading-6 mt-3 font-semibold">{service.desc}&nbsp;<span className="text-purple text-sm text-end font-medium tracking-wide">read more</span></p>
@@ -75,32 +81,56 @@ const Services = () => {
         <div ref={modalRef} className="p-6 max-h-[80vh] overflow-y-auto no-scrollbar relative">
           {selectedService && (
             <>
-              <Image src={selectedService.thumbnail} width={300} height={300} alt={selectedService.title} className="w-20 h-20 mb-4 modal-top-img" />
+              <Image 
+              src={selectedService.thumbnail} 
+              width={300} height={300} 
+              alt={selectedService.title} 
+              className="w-20 h-20 mb-4 modal-top-img" 
+              style={{ width: 'auto', height: 'auto' }}
+              />
+
               <div className="lg:ms-5">
                 <h3 className="text-start py-6 text-xl md:text-2xl font-bold">{selectedService.title}</h3>
 
                 {/* Detailed paragraphs */}
                 {selectedService.detailedDesc.paragraphs.map((paragraph, idx) => (
-                  <p key={idx} className="text-start text-white-100 text-md mt-3 leading-6 tracking-wide font-normal">{paragraph}</p>
+                  <p key={idx} className="text-start text-white-200 text-sm mt-3 leading-7 tracking-wide font-normal">{paragraph}</p>
                 ))}
 
                 {/* Render images */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 py-8 gap-4 mt-6">
                   {selectedService.detailedDesc.images.map((image, idx) => (
-                    <Image key={idx} src={image.src} width={250} height={200} alt={image.alt} className="w-full h-auto object-cover rounded-lg shadow-md modal-img" />
+                    <Image 
+                    key={idx} 
+                    src={image.src} 
+                    width={300} 
+                    height={300} 
+                    alt={image.alt} 
+                    className="w-full h-auto object-cover rounded-lg shadow-md modal-img" 
+                    style={{ width: 'auto', height: 'auto' }}
+                    />
+                    
                   ))}
                 </div>
                   
                 {/* Text1 paragraphs */}
                 {selectedService.detailedDesc.textDesc.map((text, idx) => (
-                  <p key={idx} className="text-start text-white-100 text-md mt-3 leading-6 tracking-wide font-normal">{text}</p>
+                  <p key={idx} className="text-start text-white-200 text-sm mt-3 leading-7 tracking-wide font-normal">{text}</p>
                 ))}
 
                 {/* Render icons */}
                 {selectedService.detailedDesc.icons && (
                   <div className="flex justify-between space-x-4 gap-2 py-4 px-10 mt-6">
                     {selectedService.detailedDesc.icons.map((icon, idx) => (
-                      <Image key={idx} src={icon.src} alt={icon.alt} width={100} height={100} className="w-12 h-12 oauth-icon" />
+                      <Image 
+                      key={idx} 
+                      src={icon.src} 
+                      alt={icon.alt} 
+                      width={100} 
+                      height={100} 
+                      className="w-12 h-12 oauth-icon" 
+                      style={{ width: 'auto', height: 'auto' }}
+                      />
                     ))}
                   </div>
                 )}

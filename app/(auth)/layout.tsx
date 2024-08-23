@@ -15,17 +15,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <div className="flex flex-col lg:flex-row min-h-screen h-full w-full">
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-center md:py-6 p-6 sm:p-10 text-white z-10">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <Image
               src="/Logo-icon.png"
               alt="Chatter Logo"
-              width={150}
-              height={120}
-              className="mb-0"
+              width={80}
+              height={80}
+              className="mb-0 entry-logo"
               priority={true}
               style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
             />
-            <span className="text-white font-bold text-xl">Sixtusdev</span>
+            <span className="text-white font-medium tracking-wide text-xl">Sixtusdev</span>
           </div>
 
           <ul className="mt-5 space-y-4">

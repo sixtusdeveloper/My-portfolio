@@ -271,30 +271,50 @@ export const experiences = [
   {
     date: "March 2023 - Present",
     title: "Software Engineer",
-    location: "Upwork",
+    img: "/profile.jpg",
+    organization: "Upwork",
     type: "Remote",
-    description: "Working on web applications...",
-  },
+    nature: "Contract",
+    location: "United Kingdom",
+    description: "Designing and implementing software applications and APIs for clients across diverse industries.",
+    fullDesc: "Designing and implementing software applications and APIs for clients across diverse industries, including e-commerce, healthcare, and education. Collaborating with cross-functional teams to deliver high-quality products and services, leveraging agile methodologies and best practices. Conducting code reviews, implementing automated testing, and optimizing application performance to ensure scalability and reliability. Contributing to the design and architecture of web applications, APIs, and databases, utilizing modern technologies such as React, TypeScript, Node.js, MongoDB, and TypeScript.",
+    technologies: ["React", "TypeScript", "Node.js", "PHP", "SQL", "Express", "Docker", "AWS", "Stripe", "OAuth", "RESTful APIs", "WebSockets", "Shadcn", "Framer-motion", "GitLab CI/CD", "Google Analytics", "Google Optimize", "Slack", "Microsoft Teams", "Zoom", "Google Meet", "Discord", "Figma", "Aceternity UI", "Tailwindcss", "Appwrite", "Clerk"],
+  },  
   {
     date: "June 2024 - Present",
     title: "Software Engineer",
-    location: "SkilledUp Life",
+    img: "/profile.jpg",
+    organization: "SkilledUp Life",
     type: "Remote",
-    description: "Worked on mobile apps...",
+    nature: "Volunteer",
+    location: "Ontario, Canada",  
+    description: "Assisted in developing enterprise ready software solutions for clients across various industries",
+    fullDesc: "Assisted in developing enterprise-ready software solutions for clients across various industries, including e-commerce, healthcare, and education. Collaborated with cross-functional teams to deliver high-quality products and services, leveraging agile methodologies and best practices. Conducted code reviews, implemented automated testing, and optimized application performance to ensure scalability and reliability. Contributed to the design and architecture of web applications, APIs, and databases, utilizing modern technologies such as React, Next.js, Node.js, MongoDB, Clerk, Appwrite and TypeScript.",
+    technologies: ["React", "Next.js", "Node.js", "MongoDB", "PHP", "SQL", "Express", "TypeScript", "Tailwind CSS", "Firebase", "Clerk", "Appwrite", "Vercel", "AWS", "Aceternity UI", "Chakra", "RESTful APIs", "GraphQL", "WebSockets", "GitLab CI/CD", "OAuth",  "Google Analytics", "Google Tag Manager", "Google Optimize", "Hotjar", "Figma", "Adobe XD", "Sketch", "InVision", "Jira", "Trello", "Slack", "Microsoft Teams", "Zoom", "Google Meet", "Discord", "Notion", "Google Workspace", "Microsoft Office", "Adobe Creative Cloud", "Canva", "Stripe", "tawk to"],
   },
   {
     date: "Feb 2020 - Feb 2023",
     title: "Full-stack Developer",
-    location: "Upwork",
+    img: "/profile.jpg",
+    organization: "Upwork",
     type: "Remote",
-    description: "Assisted in developing software solutions...",
+    nature: "Contract",
+    location: "United Kingdom",
+    description: "Worked on web applications and APIs for clients across various industries",
+    fullDesc: "Assisted in developing software solutions for clients across various industries, including e-commerce, healthcare, and education. Collaborated with cross-functional teams to deliver high-quality products and services, leveraging agile methodologies and best practices. Conducted code reviews, implemented automated testing, and optimized application performance to ensure scalability and reliability. Contributed to the design and architecture of web applications, APIs, and databases, utilizing modern technologies such as React, Next.js, Node.js, MongoDB, Clerk, Appwrite, Stripe, TypeScript and many more...",
+    technologies: ["React", "Next.js", "Node.js", "MongoDB", "Express", "TypeScript", "Tailwind CSS", "Firebase", "Clerk", "Appwrite", "Vercel", "AWS", "Aceternity UI", "Chakra", "RESTful APIs", "GraphQL", "WebSockets", "GitLab CI/CD", "OAuth",  "Google Analytics", "Google Tag Manager", "Google Optimize", "Hotjar", "Figma", "Adobe XD", "Sketch", "InVision", "Jira", "Trello", "Slack", "Microsoft Teams", "Zoom", "Google Meet", "Discord", "Notion", "Google Workspace", "Microsoft Office", "Adobe Creative Cloud", "Canva"],
   },
   {
     date: "Jan 2022 - Aug 2023",
     title: "Software Specialist",
-    location: "Freelancer",
+    img: "/profile.jpg",
+    organization: "Freelancer",
     type: "Remote",
-    description: "Assisted in developing software solutions...",
+    nature: "Contract",
+    location: "Stockholm County, Sweden",
+    description: "Contributed to the development and maintenance of software solutions for clients across diverse industries",
+    fullDesc: "Assisted in performing software development tasks, including coding, testing, debugging, and maintenance. Collaborated with team members to design and implement software solutions that met client requirements and specifications. Utilized agile methodologies to deliver high-quality products within project timelines. Conducted code reviews, identified bugs and issues, and implemented fixes to ensure optimal performance. Developed web applications, APIs, and databases using modern technologies such as React, Node.js, MongoDB and TypeScript.",
+    technologies: ["React", "Next.js", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS", "Firebase", "Aceternity UI", "Vercel", "AWS", "Docker", "Kubernetes", "Jenkins", "GitLab CI/CD", "OAuth", "JWT", "RESTful APIs", "GraphQL", "WebSockets", "PWA", "SEO", "Google Analytics", "Google Tag Manager", "Google Optimize", "Hotjar", "Figma", "Adobe XD", "Sketch", "InVision", "Zeplin", "Jira", "Trello", "Slack", "Microsoft Teams", "Zoom", "Google Meet", "Discord", "Notion", "Asana", "Monday.com", "Airtable", "Google Workspace", "Microsoft Office", "Adobe Creative Cloud", "Canva", "Trello", "Slack", "Microsoft Teams", "Zoom", "Google Meet", "Discord", "Notion", "Asana", "Monday.com", "Airtable", "Google Workspace", "Microsoft Office", "Adobe Creative Cloud", "Canva"],
   },
 ];
 
@@ -392,41 +412,45 @@ export const services: Service[] = [
         }
       ],
       textDesc: [
-        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
-        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT."
+        "Create a user-friendly interface that supports rich text formatting, image embedding, and media integration.",
+        "Ensure seamless content publishing with version control, draft management, and live preview functionalities.",
+        "Implement customizable templates and themes to enhance content presentation and user engagement."
       ],
     },
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
+
   {
-    id: 3,
-    title: "Personalized Content Discovery",
-    desc: "Discover new content based on your interests and reading history.",
-    detailedDesc: {
-      paragraphs: [
-        "Leverage advanced algorithms and AI to provide users with personalized content recommendations.",
-        "My services include developing recommendation engines that analyze user behavior, preferences, and content interactions to serve up relevant articles, videos, and other media.",
-        "Enhance user engagement by helping them discover new and exciting content tailored to their tastes."
-      ],
-      images: [
-        {
-          src: "/content.jpg",
-          alt: "Content Discovery"
-        },
-        {
-          src: "/AI.png",
-          alt: "AI Recommendation Engine"
-        }
-      ],
-      textDesc: [
-        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
-        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT."
-      ],
-    },
-    className: "md:col-span-2",
-    thumbnail: "/exp3.svg",
+  id: 3,
+  title: "Personalized Content Discovery",
+  desc: "Discover new content based on your interests and reading history.",
+  detailedDesc: {
+    paragraphs: [
+      "Leverage advanced algorithms and AI to provide users with personalized content recommendations.",
+      "My services include developing recommendation engines that analyze user behavior, preferences, and content interactions to serve up relevant articles, videos, and other media.",
+      "Enhance user engagement by helping them discover new and exciting content tailored to their tastes."
+    ],
+    images: [
+      {
+        src: "/content.jpg",
+        alt: "Content Discovery"
+      },
+      {
+        src: "/AI.png",
+        alt: "AI Recommendation Engine"
+      }
+    ],
+    textDesc: [
+      "Develop machine learning models to analyze user preferences and predict relevant content.",
+      "Integrate real-time data processing to deliver up-to-date content recommendations based on user activity.",
+      "Design intuitive interfaces for users to easily discover and interact with personalized content."
+    ],
   },
+   className: "md:col-span-2",
+   thumbnail: "/exp3.svg",
+  },
+
   {
     id: 4,
     title: "Social Interactions",
@@ -443,16 +467,18 @@ export const services: Service[] = [
           alt: "Social Interactions"
         },
         {
-          src: "/comments01.png", 
+          src: "/images.jpg", 
           alt: "Comment System"
         }
       ],
       textDesc: [
-        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
-        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT."
+        "Implement interactive features like comments, likes, and shares to enhance user participation.",
+        "Ensure real-time updates and notifications to keep users engaged with ongoing interactions.",
+        "Integrate moderation tools to manage and filter user-generated content effectively."
       ],
     },
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   }
+  
 ];

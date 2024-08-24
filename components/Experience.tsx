@@ -276,7 +276,7 @@ const Experience = () => {
                   <p className="mb-6 text-sm text-medium text-white-100 leading-6 tracking-wide">{selectedEducation?.description}</p>
                   <div className=" relative flex justify-center text-center w-full mb-4">
                     <Image
-                      src={selectedEducation?.img || "/fallback.jpg"}
+                      src={selectedEducation?.img || "/cert.png"}
                       alt={selectedEducation?.degree || "Certificate Image"}
                       className="rounded-md w-full relative"
                       width={600}

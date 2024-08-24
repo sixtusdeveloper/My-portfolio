@@ -23,8 +23,6 @@ const truncateDescription = (text: string, maxLength: number): string => {
 };
 
 // Pagination
-
-
 const Experience = () => {
   const [selectedWorkExperience, setSelectedWorkExperience] = useState<WorkExperienceItem | null>(null);
   const [selectedSection, setSelectedSection] = useState("work");
@@ -370,6 +368,7 @@ const Experience = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
           <div className="w-16 h-16 border-t-4 border-b-4 border-white rounded-full animate-spin"></div>
         </div>
+        
       )}
     </section>
   );

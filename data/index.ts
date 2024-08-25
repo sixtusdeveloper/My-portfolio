@@ -345,12 +345,12 @@ export const services: Service[] = [
   {
     id: 1,
     title: "User Registration and Authentication",
-    desc: "Secure and seamless user onboarding with email and social media authentication.",
+    desc: "Secure and efficient user registration and authentication solutions utilizing modern technologies.",
     detailedDesc: {
       paragraphs: [
-        "Implement robust user authentication systems using industry-standard protocols like OAuth and JWT.",
-        "Whether you need email verification, multi-factor authentication, or social media logins, I provide secure and scalable solutions to ensure that your users have a seamless registration experience.",
-        "My services include custom user management dashboards and integration with popular platforms like Firebase, Appwrite, Auth0, or custom backends."
+        "Implement robust authentication systems leveraging industry-standard protocols such as OAuth and JWT to ensure secure and seamless user onboarding.",
+        "My solutions encompass email verification, multi-factor authentication, and social media logins, providing a comprehensive approach to user security and convenience.",
+        "Custom user management dashboards and integrations with leading platforms like Firebase, Appwrite, Auth0, or bespoke backends are included."
       ],
       images: [
         {
@@ -363,10 +363,9 @@ export const services: Service[] = [
         }
       ],
       textDesc: [
-      "In today's digital landscape, where data breaches and cyber threats are increasingly prevalent, ensuring robust security measures is paramount. OAuth, a widely adopted open standard for access delegation, exemplifies this commitment to security. By enabling secure, token-based authentication and authorization, OAuth provides a mechanism for applications to access user resources without exposing sensitive credentials.",
-      "The significance of OAuth in maintaining security cannot be overstated. It minimizes the risk of credential leakage by eliminating the need for users to share their passwords with third-party applications. Instead, OAuth leverages access tokens that are securely managed and periodically refreshed, reducing the potential for unauthorized access.",
-      "In addition to OAuth, JSON Web Tokens (JWT) offer a secure method for transmitting information between parties. JWTs are digitally signed, ensuring data integrity and authenticity. By leveraging JWTs in user authentication processes, developers can enhance security and mitigate the risk of data tampering or interception.",
-      "Implementing OAuth and JWT in user authentication systems is essential for safeguarding user data and maintaining trust. By adopting these industry-standard protocols, organizations can enhance security, protect user privacy, and build a foundation of trust with their user base."
+        "In an era where cyber threats are ever-present, implementing robust security measures is crucial. OAuth, a widely recognized standard for secure access delegation, ensures that sensitive credentials are not exposed. By utilizing access tokens, OAuth minimizes the risk of unauthorized access.",
+        "JWTs (JSON Web Tokens) provide a secure mechanism for transmitting information, with built-in data integrity and authenticity through digital signatures. This enhances security and mitigates data tampering risks.",
+        "Adopting OAuth and JWT protocols helps safeguard user data and fosters trust by enhancing security and protecting privacy."
       ],
       icons: [
         {
@@ -385,12 +384,12 @@ export const services: Service[] = [
   {
     id: 2,
     title: "Content Creation and Publishing",
-    desc: "Rich text editor for creating and publishing engaging content with ease.",
+    desc: "Advanced platforms for creating and publishing dynamic content with ease.",
     detailedDesc: {
       paragraphs: [
-        "Develop dynamic content creation platforms that allow users to create, edit, and publish content effortlessly.",
-        "I specialize in building intuitive WYSIWYG editors, markdown-based editors, and custom content management systems tailored to your needs.",
-        "Whether it's a blogging platform, an article publication site, or a full-fledged content management system (CMS), my solutions are designed for scalability and ease of use."
+        "Design and develop content creation platforms that empower users to create, edit, and publish content effortlessly.",
+        "Specializing in WYSIWYG editors, markdown editors, and custom CMS solutions tailored for scalability and user-friendliness.",
+        "Whether it's a blogging platform, a publication site, or a comprehensive CMS, my solutions are designed to enhance usability and scalability."
       ],
       images: [
         {
@@ -403,54 +402,52 @@ export const services: Service[] = [
         }
       ],
       textDesc: [
-        "Create a user-friendly interface that supports rich text formatting, image embedding, and media integration.",
-        "Ensure seamless content publishing with version control, draft management, and live preview functionalities.",
-        "Implement customizable templates and themes to enhance content presentation and user engagement."
+        "Create intuitive interfaces that support rich text formatting, image embedding, and media integration for a seamless content creation experience.",
+        "Implement features like version control, draft management, and live previews to streamline content publishing and enhance user engagement.",
+        "Provide customizable templates and themes to improve content presentation and overall user interaction."
       ],
     },
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
-
   {
-  id: 3,
-  title: "Personalized Content Discovery",
-  desc: "Discover new content based on your interests and reading history.",
-  detailedDesc: {
-    paragraphs: [
-      "Leverage advanced algorithms and AI to provide users with personalized content recommendations.",
-      "My services include developing recommendation engines that analyze user behavior, preferences, and content interactions to serve up relevant articles, videos, and other media.",
-      "Enhance user engagement by helping them discover new and exciting content tailored to their tastes."
-    ],
-    images: [
-      {
-        src: "/content.jpg",
-        alt: "Content Discovery"
-      },
-      {
-        src: "/AI.png",
-        alt: "AI Recommendation Engine"
-      }
-    ],
-    textDesc: [
-      "Develop machine learning models to analyze user preferences and predict relevant content.",
-      "Integrate real-time data processing to deliver up-to-date content recommendations based on user activity.",
-      "Design intuitive interfaces for users to easily discover and interact with personalized content."
-    ],
+    id: 3,
+    title: "Personalized Content Discovery",
+    desc: "Advanced algorithms and AI-driven recommendations for tailored content discovery.",
+    detailedDesc: {
+      paragraphs: [
+        "Utilize advanced algorithms and AI to deliver personalized content recommendations based on user behavior, preferences, and interactions.",
+        "Develop recommendation engines that enhance user engagement by suggesting relevant articles, videos, and media tailored to individual tastes.",
+        "Enhance user engagement by helping them discover new and exciting content tailored to their preferences."
+      ],
+      images: [
+        {
+          src: "/content.jpg",
+          alt: "Content Discovery"
+        },
+        {
+          src: "/AI.png",
+          alt: "AI Recommendation Engine"
+        }
+      ],
+      textDesc: [
+        "Leverage machine learning models to analyze user preferences and predict relevant content, enhancing the discovery experience.",
+        "Integrate real-time data processing for up-to-date recommendations based on user activity and interactions.",
+        "Design user-friendly interfaces that facilitate seamless content discovery and interaction."
+      ],
+    },
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg",
   },
-   className: "md:col-span-2",
-   thumbnail: "/exp3.svg",
-  },
-
   {
     id: 4,
     title: "Social Interactions",
-    desc: "Engage with other users through comments and likes.",
+    desc: "Enhance user engagement with advanced social interaction features.",
     detailedDesc: {
       paragraphs: [
-        "Boost user engagement on your platform by integrating social interaction features such as comments, likes, shares, and more.",
-        "I create scalable solutions that foster community building, including real-time comment systems, user-generated content moderation, and integration with social media platforms.",
-        "My services ensure that your users can connect, interact, and share seamlessly."
+        "Integrate features such as comments, likes, and shares to foster community building and user engagement.",
+        "Create scalable solutions for real-time comment systems, content moderation, and social media integration.",
+        "Ensure seamless connectivity and interaction among users to enhance their overall experience."
       ],
       images: [
         {
@@ -463,13 +460,12 @@ export const services: Service[] = [
         }
       ],
       textDesc: [
-        "Implement interactive features like comments, likes, and shares to enhance user participation.",
-        "Ensure real-time updates and notifications to keep users engaged with ongoing interactions.",
-        "Integrate moderation tools to manage and filter user-generated content effectively."
+        "Implement interactive features like comments, likes, and shares to boost user participation and community engagement.",
+        "Provide real-time updates and notifications to keep users engaged and informed about ongoing interactions.",
+        "Incorporate moderation tools to effectively manage and filter user-generated content."
       ],
     },
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   }
-  
 ];

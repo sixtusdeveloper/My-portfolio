@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
       <div className="flex justify-center items-center py-4 mt-2 md:mt-6">
         <span className="w-full flex flex-col text-center text-white-100 text-sm p-2 tracking-wider">
           Copyright&copy; 2024. developed by Sixtusdev | all rights reserved |
-          terms & conditions.
+          terms & conditions version 0.1.0.
         </span>
       </div>
     </footer>

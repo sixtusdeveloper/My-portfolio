@@ -128,7 +128,7 @@ const Hero = () => {
           {/* CV Preview */}
           <div className="flex justify-center mb-8">
             <Image
-              src="/cv.jpg" // Replace with the correct path to your CV preview image
+              src="/My-Resume.jpg" // Replace with the correct path to your CV preview image
               alt="CV Preview"
               width={600}
               height={800}

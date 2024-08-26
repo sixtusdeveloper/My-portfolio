@@ -55,7 +55,7 @@ const Collaboration = ({
             />
             <Image
               alt="Altschool Logo"
-              src={CompanyImgThree || "/Altschool-logo.png"}
+              src={CompanyImgThree || "/altschool-logo.png"}
               width={150}
               height={100}
               style={{ width: 'auto', height: 'auto' }}

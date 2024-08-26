@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Sixtusdev",
   description: "Explore the portfolio of Sixtus, a skilled Software Engineer specializing in [React - Next.js, Typescript, MongoDB and much more]. Discover innovative projects, technical insights, and a commitment to creating impactful, user-focused applications. Let's build something great together.",
   icons: {
-    icon: '/favicon.ico', // Ensure you have a favicon in the public folder
+    icon: '/favicon.ico', 
   },
 };
 

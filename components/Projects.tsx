@@ -5,6 +5,23 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import Image from "next/image";
 
+
+
+// Truncate the Project title to a maximum length
+const MAX_TITLE_LENGTH = 30;
+const truncateTitle = (text: string, maxLength: number): string => {
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength)}...`;
+};
+
+// Truncate the Project Description to a maximum length
+const MAX_DESCRIPTION_LENGTH = 100;
+const truncateDescription = (text: string, maxLength: number): string => {
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength)}...`;
+};
+
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
   const [currentPage, setCurrentPage] = useState(1);
@@ -81,23 +98,31 @@ const Projects = () => {
 
       {/* Project Cards */}
       <div className="flex flex-wrap justify-center py-8 lg:py-10 gap-10 mt-4">
-        {currentProjects.map(({ id, title, des, img, iconLists, link }) => (
+        {currentProjects.map(({ id, title, des, img, githubLink, iconLists, link }) => (
           <div
             className="relative my-8 group overflow-hidden rounded-3xl bg-[#13162D] shadow-lg transition-transform transform hover:scale-105"
             key={id}
-            style={{ width: "460px", height: "400px" }}
+            style={{ width: "430px", height: "400px" }}
           >
             <Image
               src={img}
               alt={title}
-              width={460}
+              width={400}
               height={400}
               className="w-full h-3/5 object-cover transition-opacity duration-300 group-hover:opacity-75 project-img"
               // style={{ width: 'auto', height: 'auto' }}
             />
-            <div className="p-4">
-              <h1 className="font-bold text-xl truncate">{title}</h1>
-              <p className="text-gray-400 mt-2 text-sm line-clamp-2">{des}</p>
+            <div className="p-4 my-1">
+              <h1 className="font-bold text-xl truncate">{truncateTitle(title, MAX_TITLE_LENGTH)}</h1>
+              <p className="text-gray-400 mt-2 text-sm line-clamp-2">{truncateDescription(des,  MAX_DESCRIPTION_LENGTH)}</p>
+              <div className="relative rounded-full py-1 my-1 text-sm leading-6 text-blue-200 bg-black-00/10 hover:ring-gray-900/20">
+                Curious of the magic behind?{" "}
+                <a href={githubLink} target="_blank" className="font-semibold text-purple cursor-pointer">
+                  <span aria-hidden="true" className="absolute inset-0" />
+                  Check project codebase{" "}
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
               <div className="flex items-center justify-between mt-4">
                 <div className="flex space-x-2">
                   {iconLists.map((icon, index) => (
@@ -124,7 +149,7 @@ const Projects = () => {
                   onClick={() => handleLinkClick(link)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-blue-500 hover:text-blue-300 transition-colors duration-300"
+                  className="flex items-center cursor-pointer text-blue-500 hover:text-blue-300 transition-colors duration-300"
                 >
                   Check Live Site <FaLocationArrow className="ml-2" />
                 </a>

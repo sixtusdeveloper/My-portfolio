@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 
 // Truncate the Description to a maximum length
-const MAX_DESCRIPTION_LENGTH = 60;
+const MAX_DESCRIPTION_LENGTH = 40;
 const truncateDescription = (text: string, maxLength: number): string => {
   if (text.length <= maxLength) return text;
   return `${text.slice(0, maxLength)}...`;

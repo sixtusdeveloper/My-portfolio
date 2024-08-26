@@ -35,11 +35,6 @@
     --radius: 0.5rem;
   }
 
-  /* html {
-    --line-color: rgba(255, 255, 255, 0.2);
-    /* --line-color: #e5e7eb; */
-  
-
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -200,9 +195,6 @@
 }
 
 
-
-
-
 /* Current styles for the timeline */
 .timeline-container .timeline-icon {
   width: 20px;
@@ -337,4 +329,13 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.project-img{
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important; 
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  overflow: hidden !important;
 }

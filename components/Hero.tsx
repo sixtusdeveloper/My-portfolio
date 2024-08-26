@@ -42,9 +42,6 @@ const Hero = () => {
     setModalOpen(!isModalOpen);
   };
 
-  // const handleReadMoreClick = () => {
-  //   setReadMoreModalOpen(true);
-  // };
 
   const handleReadMoreModalToggle = () => {
     setReadMoreModalOpen(!isReadMoreModalOpen);
@@ -86,7 +83,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <h3 className="text-[1.2rem] font-bold tracking-wider text-white sm:text-[1.8rem]">
+          <h3 className="text-[1rem] font-bold tracking-wider text-white sm:text-[1.2rem]">
             {isSignedIn && user ? (
               <>
                 👋 Hey <span className="text-purple">{user.firstName}</span>

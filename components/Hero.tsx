@@ -156,7 +156,7 @@ const Hero = () => {
           {/* CV Preview */}
           <div className="flex justify-center mb-8">
             <Image
-              src="/My-Resume.jpg"
+              src="/my-resume.jpg"
               alt="CV Preview"
               width={600}
               height={800}

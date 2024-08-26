@@ -16,7 +16,7 @@ const truncateCourse = (text: string, maxLength: number): string => {
 };
 
 // Truncate the Description to a maximum length
-const MAX_DESCRIPTION_LENGTH = 30;
+const MAX_DESCRIPTION_LENGTH = 60;
 const truncateDescription = (text: string, maxLength: number): string => {
   if (text.length <= maxLength) return text;
   return `${text.slice(0, maxLength)}...`;
@@ -129,7 +129,7 @@ const Experience = () => {
         <div className="flex justify-center space-x-4 mb-8">
           <button
             onClick={() => setSelectedSection("work")}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-md cursor-pointer ${
               selectedSection === "work"
                 ? "bg-blue-800 text-white"
                 : "bg-transparent ring-1 text-gray-400"
@@ -139,7 +139,7 @@ const Experience = () => {
           </button>
           <button
             onClick={() => setSelectedSection("education")}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-md cursor-pointer ${
               selectedSection === "education"
                 ? "bg-blue-800 text-white"
                 : "bg-transparent ring-1 text-gray-400"
@@ -187,7 +187,7 @@ const Experience = () => {
                   <a
                     href="#"
                     onClick={() => openModal(experience)}
-                    className="font-medium tracking-wider text-sm text-purple hover:text-blue-100"
+                    className="font-medium tracking-wider cursor-pointer text-sm text-purple hover:text-blue-100"
                   >
                     <span aria-hidden="true" className="absolute inset-0" />
                     Read more{" "}
@@ -230,7 +230,7 @@ const Experience = () => {
                     <a
                       href="#"
                       onClick={() => openModal(edu)}
-                      className="font-medium tracking-wider text-sm text-purple hover:text-blue-100"
+                      className="font-medium tracking-wider cursor-pointer text-sm text-purple hover:text-blue-100"
                     >
                       <span aria-hidden="true" className="absolute inset-0" />
                       View credentials{" "}
@@ -288,7 +288,7 @@ const Experience = () => {
                   <div className="mt-6 flex items-center justify-center">
                     <button
                       onClick={handleDownload}
-                      className={`px-4 py-2 flex items-center justify-center space-x-2 rounded-md shadow-md ${
+                      className={`px-4 py-2 flex items-center cursor-pointer justify-center space-x-2 rounded-md shadow-md ${
                         downloadStatus === "downloaded"
                           ? "bg-green-500 text-white"
                           : "bg-blue-600 text-white hover:bg-blue-700"

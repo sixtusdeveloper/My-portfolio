@@ -75,7 +75,7 @@ const Hero = () => {
                 href="https://github.com/sixtusdeveloper/My-portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-purple"
+                className="font-semibold text-purple cursor-pointer"
               >
                 <span aria-hidden="true" className="absolute inset-0" />
                 Check my codebase&nbsp;<span aria-hidden="true">&rarr;</span>
@@ -120,7 +120,7 @@ const Hero = () => {
                   <GoArrowRight className="text-purple forced-colors:purple text-lg" />
                 }
                 position="right"
-                otherClasses=" md:ring-none flex justify-center items-center text-center tracking-wider text-purple border-gray-200 rounded-lg hover:border-black-200"
+                otherClasses=" md:ring-none cursor-pointer flex justify-center items-center text-center tracking-wider text-purple border-gray-200 rounded-lg hover:border-black-200"
               />
             </a>
           

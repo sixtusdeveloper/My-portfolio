@@ -1,6 +1,5 @@
 import { testimonials } from "@/data";
 import { InfiniteMovingCards } from "@/components/ui/InfiniteMovingCards";
-// import { companies } from '@/data';
 
 import React from "react";
 

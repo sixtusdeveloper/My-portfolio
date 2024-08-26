@@ -52,7 +52,7 @@ const ReadMoreModal: React.FC<ReadMoreModalProps> = ({ isOpen, onClose, children
                     </a>
                     <button
                         onClick={onClose}
-                        className="py-2 px-4 flex items-center text-sm rounded-lg bg-red-600 text-white hover:bg-red-800 transition duration-300 ease-in-out"
+                        className="py-2 px-4 flex cursor-pointer items-center text-sm rounded-lg bg-red-600 text-white hover:bg-red-800 transition duration-300 ease-in-out"
                         >
                         Cancel
                     </button>

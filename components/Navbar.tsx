@@ -65,7 +65,7 @@ export default function Navbar({
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-100"
+                className="-m-2.5 inline-flex items-center  cursor-pointer justify-center rounded-md p-2.5 text-blue-100"
               >
                 <span className="sr-only">Open main menu</span>
                 <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -76,7 +76,7 @@ export default function Navbar({
                 <a
                   key={item.name}
                   href={`#${item.href.substring(1)}`}
-                  className={`text-sm font-medium leading-6 tracking-wider ${activeSection === item.href.substring(1) ? 'text-blue-300' : 'text-blue-100'} hover:text-blue-200`}
+                  className={`text-sm font-medium leading-6 cursor-pointer tracking-wider ${activeSection === item.href.substring(1) ? 'text-blue-300' : 'text-blue-100'} hover:text-blue-200`}
                   onClick={() => handleClick(item.href)}
                 >
                   {item.name}

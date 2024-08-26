@@ -99,7 +99,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           </button>
           <button
             onClick={handleDownloadDOCXClick}
-            className="py-2 px-4 flex text-sm items-center rounded-lg bg-green-600 text-white hover:bg-green-800 transition duration-300 ease-in-out"
+            className="py-2 px-4 cursor-pointer flex text-sm items-center rounded-lg bg-green-600 text-white hover:bg-green-800 transition duration-300 ease-in-out"
           >
             <AiOutlineDownload className="mr-2" />
             {downloadStatus.docx}
